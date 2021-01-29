@@ -129,12 +129,12 @@ for (var i = trialsPerBlock; i <= totalTrials; i += trialsPerBlock) {
 }
 
 // Choose deck placement
-var deckImagePrefix    = "../stimuli/A/avatar_";
+var deckImagePrefix    = "../stimuli/B/avatar_";
 var deckImageExtension = ".png";
 var probabilityNames   = ['high', 'medium', 'low'];
 var probabilityOrder   = shuffle(deepCopy(probabilityNames));
 var deckPositions      = ['left', 'middle', 'right'];
-var deckColorOrder     = shuffle(['red', 'black', 'blue']);
+var deckColorOrder     = shuffle(['purple', 'orange', 'green']);
 
 var probabilityToColor    = _.zipObject(probabilityOrder, deckColorOrder);
 var positionToProbability = _.zipObject(deckPositions, probabilityOrder);
