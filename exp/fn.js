@@ -184,6 +184,8 @@ function deepCopy(obj) {
         endDate: endDate,
         subjectkey: GUID,
         site: siteNumber,
+        visit: visit,
+        week: week,
         autoWorkerID: workerId,
         interview_date: today,
         interview_age: ageAtAssessment,

@@ -64,17 +64,17 @@ include_once ("../db/config.php");
 <div class="filler"> </div>
 <div class="deckContainer task">
     <div class="imgContainer" id="leftDeck">
-        <img id="leftDeckImage" src="../stimuli/deck_red.jpg" height="270px" width="200px"/>
+        <img id="leftDeckImage" src="../stimuli/avatar_red.png" height="270px" width="200px"/>
         <div class="feedback" id="leftFeedback">100</div>
     </div>
     
     <div class="imgContainer" id="middleDeck">
-        <img id="middleDeckImage" src="../stimuli/deck_black.jpg" height="270px" width="200px"/>
+        <img id="middleDeckImage" src="../stimuli/avatar_black.png" height="270px" width="200px"/>
         <div class="feedback" id="middleFeedback">-50</div>
     </div>
     
     <div class="imgContainer" id="rightDeck">
-         <img id="rightDeckImage" src="../stimuli/deck_blue.jpg" height="270px" width="200px"/>
+         <img id="rightDeckImage" src="../stimuli/avatar_blue.png" height="270px" width="200px"/>
          <div class="feedback" id="rightFeedback">-50</div>
     </div>
     
@@ -113,6 +113,8 @@ include_once ("../db/config.php");
       let siteNumber;
       let ageAtAssessment;
       let feedbackLink;
+      let visit;
+      let week;
 
       if (db_connection === false) {
         GUID = "";
@@ -121,6 +123,8 @@ include_once ("../db/config.php");
         siteNumber = "";
         ageAtAssessment = "";
         feedbackLink = "";
+        visit = "";
+        week = "";
       } else if (db_connection === true) {
         GUID = "<?php echo $subjectKey?>";
         subjectID = "<?php echo $consortId?>";
@@ -128,6 +132,8 @@ include_once ("../db/config.php");
         siteNumber = "<?php echo $institutionAlias?>";
         ageAtAssessment = "<?php echo $ageInMonths?>";
         feedbackLink = "https://belieflab.yale.edu/omnibus/eCRFs/feedback/tasks/kamin.php?candidateId=<?php echo $candidateId?>&studyId=<?php echo $studyId?>";
+        visit = "<?php echo $visit?>";
+        week = "<?php echo $week?>";
       }
     </script>
 

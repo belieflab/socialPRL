@@ -89,7 +89,7 @@ var firstHalfProbabilities  = probabilities[randomIntFromInterval(0, 0)];
 // var secondHalfProbabilities = probabilities[randomIntFromInterval(0, 1)];
 var secondHalfProbabilities = probabilities[randomIntFromInterval(1, 1)];
 var numBlocks               = 4;
-var trialsPerBlock          = 40;
+var trialsPerBlock          = 1;
 var totalTrials             = numBlocks * trialsPerBlock;
 var breakTrials             = [];
 var trial                   = 0;
@@ -129,8 +129,8 @@ for (var i = trialsPerBlock; i <= totalTrials; i += trialsPerBlock) {
 }
 
 // Choose deck placement
-var deckImagePrefix    = "../stimuli/B/deck_";
-var deckImageExtension = ".jpg";
+var deckImagePrefix    = "../stimuli/A/avatar_";
+var deckImageExtension = ".png";
 var probabilityNames   = ['high', 'medium', 'low'];
 var probabilityOrder   = shuffle(deepCopy(probabilityNames));
 var deckPositions      = ['left', 'middle', 'right'];
