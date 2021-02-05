@@ -22,6 +22,9 @@ var keyMap = {
   continue: 48  // 48 = zero, 32 = space, but problematic on firefox for triggering button presses!
 };
 
+let turkprime_online = true;
+
+
 
 
 //subject ID popup
