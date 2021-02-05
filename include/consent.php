@@ -6,6 +6,7 @@
     $(".buttonHolder").css({display: "block"});
   };
 </script>
+<div id = "consent">
 <div class="loading centeredDiv">
     <h1 class="loading">Loading...</h1>
   </div>
@@ -63,3 +64,5 @@
 
     </p>
   </div>
+  </div>
+  <button id="submitButton" class="loadMain" onclick="validateConsent()" type="button">CONSENT</button>

@@ -36,10 +36,14 @@ include_once ("../db/config.php");
 
 <body onbeforeunload="return areYouSure()">
     <?php
-      if ($db_connection_status == true) {
-        include_once "../include/nda.php";
+      if ($turkprime_online == true) {
+        include_once "../include/consent.php";
         // echo'<br>';
         // echo'connected';
+      } else if ($db_connection_status == true) {
+          include_once "../include/nda.php";
+          // echo'<br>';
+          // echo'connected';
       } else if ($db_connection_status == false) {
         include_once "../include/intake.php";
         // echo'<br>';
@@ -93,8 +97,8 @@ include_once ("../db/config.php");
 <script type="text/javascript" src="../libraries/seedrandom.js"></script>
 <script type="text/javascript" src="../libraries/jquery.csv.js"></script>
 <script type="text/javascript" src="../exp/fn.js"></script>
-<!-- <script type="text/javascript" src="../exp/rand.js"></script> -->
 <script type="text/javascript" src="../exp/conf.js"></script>
+<script type="text/javascript" src="../exp/lang.js"></script>
 
 <script>
   // show page when loaded 
@@ -116,7 +120,9 @@ include_once ("../db/config.php");
       let visit;
       let week;
 
-      if (db_connection === false) {
+      if (turkprime_online === true) {
+        
+      } else if (db_connection === false) {
         GUID = "";
         subjectID = "";
         sexAtBirth = "";

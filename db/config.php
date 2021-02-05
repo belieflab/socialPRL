@@ -23,6 +23,8 @@ if (file_exists($_SERVER["DOCUMENT_ROOT"] . '/config.php')) {
   $week = $_GET["week"];
   } else {
     $db_connection_status = null;
+    $turkprime_online = true;
+    echo '<script type="text/javascript">let turkprime_online = true</script>';
     // echo$db_connection_status;
     echo '<script type="text/javascript">let db_connection = false</script>';
     $subjectKey = '';

@@ -19,6 +19,19 @@ let yyyy = today.getFullYear();
 today = mm + '/' + dd + '/' + yyyy;
 let todayStandard = yyyy + '-' + mm + '-' + dd;
 
+// this function is called when turkprime_online == true
+function validateConsent() {
+    let intake = document.getElementById("consent");
+    let consent = document.getElementById("load");
+    if (intake.style.display === "none") {
+        intake.style.display = "block";
+    } else {
+        intake.style.display = "none";
+        consent.style.display = "block";
+    }
+}
+
+
 // these functions are called when db_connection === true (e.g. omnibus.local or omnibus.yale) && db_connection === true
 
 function validateIntake() {
