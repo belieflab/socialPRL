@@ -7,11 +7,19 @@ switch(language){
     // Case 1: Run english instructions
     case 'english':
         translate();
+        var modelResponse = "I will answer open-ended questions.";
+        var almostModelResponse = "I will answer open-ended questions";
+        var errorMessage = "Please enter the requested text exactly into the box before clicking next!";
+
+    
         //const consent = 'CONSENT';
         // Attrition instructions -- English
+
+        var openEnded = "This is an anonymous survey consisting of multiple questions. A few questions are open-ended questions where you need to type a few sentences of a short paragraph or two. Many MTurk workers do not like answering open-ended questions and tend to quit a survey once they see such questions. <b>If a sizable number of people quit a survey halfway, the data quality of that survey would be compromised. However, our research depends on good quality data.</b> Thus, please make sure you do not mind open-ended questions before taking this survey.";
+
         var attrition_instructions =  "Please type the following sentence into the box below exactly as written " +
         "to proceed: " + "<br>" +
-        "<i>I am ready to begin this task.</i>" +
+        "<i>I will answer open-ended questions.</i>" +
         "<br /><br />";
 
         var instr1 = "Welcome! Before we begin, please make your window as large as possible. " +
@@ -182,6 +190,16 @@ switch(language){
     // Run French instructions    
     case 'french':
         translate();
+        var modelResponse = "XXX.";
+        var almostModelResponse = "XXX";
+        var errorMessage = "XXX";
+
+    
+        //const consent = 'CONSENT';
+        // Attrition instructions -- French
+
+        var openEnded = "XXX";
+
         // Attrition instructions -- French
         var attrition_instructions =  "Veuillez taper la phrase suivante dans la case ci-dessous exactement telle qu'elle est écrite " +
         "si vous souhaitez toujours répondre à l'enquête: " + "<br>" +
@@ -250,11 +268,121 @@ switch(language){
         "<br /><br />" +
         "Veuillez cliquer sur 'Suivant' chaque fois que vous êtes prêt à démarrer la tâche principale.";
 
+        function reset() {
+            trialStartTime = Date.now();
+              if (breakTrials.includes(trial)) {
+                breakOn = true;
+              keysAllowed = true;
+          
+              // re-randomize deck contingencies
+              randomizeDecksOn = true;
+          
+              var percentComplete = trial/totalTrials * 100;
+              var breakText;
+              if (percentComplete < 100) {
+                  breakText = "You are now " + percentComplete + "% done. Please press the zero (0) key to continue.";
+              } else {
+                breakText = "You have completed the task. Your final score is " + score + ".\n" + '<br>' +
+                  "You have successfully completed the experiment and your data has been saved.\n" + '<br>' +
+                  "To leave feedback on this task, please click the following link:\n" + '<br>' +
+                  "<a href="+feedbackLink+">Leave Task Feedback!</a>\n" + '<br>' +
+                      // "Please wait for the experimenter to continue.\n"+ '<br>' +
+                  "You may now close the expriment window at anytime.\n";
+          
+                // save data
+                endDate = new Date();
+          
+                // check if we're excluding data
+                var this_workerId_used_before = check_workerId_used_before( workerId, pastParticipantList );
+          
+                if ( (this_workerId_used_before) || (refreshCount > 0) ) {
+                  excludeThisSubject = true;
+                  if (this_workerId_used_before) {
+                    excludedReason = 'duplicate_worker';
+                  } else if (refreshCount > 0) {
+                    excludedReason = 'refreshed_experiment_page';
+                  }
+                }
+          
+                saveData();
+                addToParticipantList(workerId, firstHalfProbabilities, secondHalfProbabilities,  startDate, endDate, pastParticipantListCSVName); // XXX
+              }
+          
+              setBreakText(breakText);
+              showBreakText();
+              hideDecks();
+              hideFixation();
+              hideFeedback();
+            } else {
+                showDecks();
+              hideFixation();
+              hideFeedback();
+              hideBreakText();
+              breakOn = false;
+              keysAllowed = true;
+            }
+          
+            if (practiceOn && (practiceTrial == totalPracticeTrials)) {
+              breakOn = true;
+              keysAllowed = false;
+          
+              // re-randomize deck contingencies
+              randomizeDecksOn = true;
+          
+              hideDecks();
+              hideFixation();
+              hideFeedback();
+          
+              currInstructions += 1;
+              $('#instructions1').html(task_instructions[currInstructions]);
+              $('#instructionsHolder').css({display: 'block'});
+              $('#instructions1').css({display: 'block'});
+              $('#nextButton').css({display: 'block'});
+            }
+          
+            // randomize deck contingencies
+            if (randomizeDecksOn) {
+                var tempProbabilityOrder = shuffle(deepCopy(probabilityNames));
+              while (tempProbabilityOrder.indexOf("high") == probabilityOrder.indexOf("high")) {
+                  tempProbabilityOrder = shuffle(tempProbabilityOrder);
+              }
+          
+              probabilityOrder = tempProbabilityOrder;
+          
+              probabilityToColor    = _.zipObject(probabilityOrder, deckColorOrder);
+              positionToProbability = _.zipObject(deckPositions, probabilityOrder);
+              probabilityToPosition = _.zipObject(probabilityOrder, deckPositions);
+              positionToColor       = _.zipObject(deckPositions, deckColorOrder);
+              keyToPosition         = _.zipObject(responseKeyList, deckPositions);
+              keyToProbability      = _.zipObject(responseKeyList, probabilityOrder);
+              trialProbabilityArray = trial <= (totalTrials/2) ? firstHalfProbabilities : secondHalfProbabilities;
+              // theseProbabilities    = _.zipObject(probabilityNames, firstHalfProbabilities);
+              theseProbabilities    = _.zipObject(probabilityNames, trialProbabilityArray);
+          
+              // make sure we don't do this twice in a row, and reset the streak
+              randomizeDecksOn = false;
+              streak = 0;
+              strikes = 0;
+            }
+          
+          }
+
+
         break
 
     // Run German instructions    
     case 'german':
         translate();
+        var modelResponse = "XXX.";
+        var almostModelResponse = "XXX";
+        var errorMessage = "XXX";
+
+    
+        //const consent = 'CONSENT';
+        // Attrition instructions -- German
+
+        var openEnded = "XXX";
+
         // Attrition instructions -- German
         var attrition_instructions =  "Bitte geben Sie den folgenden Satz genau so in das Feld ein, wie er geschrieben wurde," +
         "wenn Sie noch an der Umfrage teilnehmen möchten: " + "<br>" +
@@ -325,6 +453,105 @@ switch(language){
         "<br /><br />" +
         "Klicken Sie auf 'Weiter', wenn Sie bereit sind, die Hauptaufgabe zu starten.";
         
+        function reset() {
+            trialStartTime = Date.now();
+              if (breakTrials.includes(trial)) {
+                breakOn = true;
+              keysAllowed = true;
+          
+              // re-randomize deck contingencies
+              randomizeDecksOn = true;
+          
+              var percentComplete = trial/totalTrials * 100;
+              var breakText;
+              if (percentComplete < 100) {
+                  breakText = "You are now " + percentComplete + "% done. Please press the zero (0) key to continue.";
+              } else {
+                breakText = "You have completed the task. Your final score is " + score + ".\n" + '<br>' +
+                  "You have successfully completed the experiment and your data has been saved.\n" + '<br>' +
+                  "To leave feedback on this task, please click the following link:\n" + '<br>' +
+                  "<a href="+feedbackLink+">Leave Task Feedback!</a>\n" + '<br>' +
+                      // "Please wait for the experimenter to continue.\n"+ '<br>' +
+                  "You may now close the expriment window at anytime.\n";
+          
+                // save data
+                endDate = new Date();
+          
+                // check if we're excluding data
+                var this_workerId_used_before = check_workerId_used_before( workerId, pastParticipantList );
+          
+                if ( (this_workerId_used_before) || (refreshCount > 0) ) {
+                  excludeThisSubject = true;
+                  if (this_workerId_used_before) {
+                    excludedReason = 'duplicate_worker';
+                  } else if (refreshCount > 0) {
+                    excludedReason = 'refreshed_experiment_page';
+                  }
+                }
+          
+                saveData();
+                addToParticipantList(workerId, firstHalfProbabilities, secondHalfProbabilities,  startDate, endDate, pastParticipantListCSVName); // XXX
+              }
+          
+              setBreakText(breakText);
+              showBreakText();
+              hideDecks();
+              hideFixation();
+              hideFeedback();
+            } else {
+                showDecks();
+              hideFixation();
+              hideFeedback();
+              hideBreakText();
+              breakOn = false;
+              keysAllowed = true;
+            }
+          
+            if (practiceOn && (practiceTrial == totalPracticeTrials)) {
+              breakOn = true;
+              keysAllowed = false;
+          
+              // re-randomize deck contingencies
+              randomizeDecksOn = true;
+          
+              hideDecks();
+              hideFixation();
+              hideFeedback();
+          
+              currInstructions += 1;
+              $('#instructions1').html(task_instructions[currInstructions]);
+              $('#instructionsHolder').css({display: 'block'});
+              $('#instructions1').css({display: 'block'});
+              $('#nextButton').css({display: 'block'});
+            }
+          
+            // randomize deck contingencies
+            if (randomizeDecksOn) {
+                var tempProbabilityOrder = shuffle(deepCopy(probabilityNames));
+              while (tempProbabilityOrder.indexOf("high") == probabilityOrder.indexOf("high")) {
+                  tempProbabilityOrder = shuffle(tempProbabilityOrder);
+              }
+          
+              probabilityOrder = tempProbabilityOrder;
+          
+              probabilityToColor    = _.zipObject(probabilityOrder, deckColorOrder);
+              positionToProbability = _.zipObject(deckPositions, probabilityOrder);
+              probabilityToPosition = _.zipObject(probabilityOrder, deckPositions);
+              positionToColor       = _.zipObject(deckPositions, deckColorOrder);
+              keyToPosition         = _.zipObject(responseKeyList, deckPositions);
+              keyToProbability      = _.zipObject(responseKeyList, probabilityOrder);
+              trialProbabilityArray = trial <= (totalTrials/2) ? firstHalfProbabilities : secondHalfProbabilities;
+              // theseProbabilities    = _.zipObject(probabilityNames, firstHalfProbabilities);
+              theseProbabilities    = _.zipObject(probabilityNames, trialProbabilityArray);
+          
+              // make sure we don't do this twice in a row, and reset the streak
+              randomizeDecksOn = false;
+              streak = 0;
+              strikes = 0;
+            }
+          
+          }
+
         break        
 }
 

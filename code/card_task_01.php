@@ -50,6 +50,9 @@ include_once ("../db/config.php");
         // echo'not connected';
       }
     ?>
+  <div id="openEndedHolder" class="attrition centeredDiv"> 
+  <p id="openEnded" class="attrition"></p>
+</div>
 <div id="attritionHolder" class="attrition centeredDiv"> 
   <p id="attritionInstructions" class="attrition"></p>
   <input required type="text" id="attritionAns" class="attrition" size="60" style="width:inherit; height:17px; font-size:15px; margin: 0 auto;" />

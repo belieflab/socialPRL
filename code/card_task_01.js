@@ -18,6 +18,7 @@ var trialStartTime         = 0;
 $("#instructions1").html(task_instructions[0]);
 
 // Set attritionInstructions
+$("#openEnded").html(openEnded);
 $("#attritionInstructions").html(attrition_instructions);
 
 document.getElementById('nextButton').onclick = function() {

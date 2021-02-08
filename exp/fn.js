@@ -48,13 +48,13 @@ function deepCopy(obj) {
     field = "#attritionAns";
     var response = $(field).val().trim(); // remove white space
   
-    var modelResponse = "I am ready to begin this task.";
-    var almostModelResponse = "I am ready to begin this task";
+//    var modelResponse = "I am ready to begin this task.";
+//    var almostModelResponse = "I am ready to begin this task";
     if ( (response == modelResponse) || (response==almostModelResponse)) {
       valid = true;
     } else {
       valid = false;
-      return alertAndFocus(field, "Please enter the requested text exactly into the box before clicking next!");
+      return alertAndFocus(field, errorMessage);
     }
     return valid;
   }
