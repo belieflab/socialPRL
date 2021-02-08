@@ -22,6 +22,12 @@ var keyMap = {
   continue: 48  // 48 = zero, 32 = space, but problematic on firefox for triggering button presses!
 };
 
+// LANGUAGE
+//const language = 'english';
+//const language = 'french';
+const language = 'german';
+
+
 // let turkprime_online = true;
 
 
