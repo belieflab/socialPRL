@@ -261,3 +261,27 @@ function deepCopy(obj) {
     return "Write something clever here...";
   }
   areYouSure();
+
+  // Translate consent button
+  function translate(){
+    let consent;
+    let load;
+    switch(language){
+      case 'english': 
+       consent='CONSENT';
+       load='LOAD';
+       break
+ 
+      case 'french': 
+       consent='XXX';
+       load='XXX';
+       break
+ 
+      case 'german': 
+       consent='XXX';
+       load='XXX';
+       break
+     }
+   document.getElementById('submitButton').innerHTML=consent;
+   document.getElementById('nextButton').innerHTML=load;
+ }

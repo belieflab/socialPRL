@@ -100,6 +100,8 @@ include_once ("../db/config.php");
 <script type="text/javascript" src="../exp/conf.js"></script>
 <script type="text/javascript" src="../exp/lang.js"></script>
 
+
+
 <script>
   // show page when loaded 
   window.onload = function() {

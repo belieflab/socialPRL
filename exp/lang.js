@@ -6,6 +6,8 @@ switch(language){
 
     // Case 1: Run english instructions
     case 'english':
+        translate();
+        //const consent = 'CONSENT';
         // Attrition instructions -- English
         var attrition_instructions =  "Please type the following sentence into the box below exactly as written " +
         "to proceed: " + "<br>" +
@@ -179,6 +181,7 @@ switch(language){
 
     // Run French instructions    
     case 'french':
+        translate();
         // Attrition instructions -- French
         var attrition_instructions =  "Veuillez taper la phrase suivante dans la case ci-dessous exactement telle qu'elle est écrite " +
         "si vous souhaitez toujours répondre à l'enquête: " + "<br>" +
@@ -251,6 +254,7 @@ switch(language){
 
     // Run German instructions    
     case 'german':
+        translate();
         // Attrition instructions -- German
         var attrition_instructions =  "Bitte geben Sie den folgenden Satz genau so in das Feld ein, wie er geschrieben wurde," +
         "wenn Sie noch an der Umfrage teilnehmen möchten: " + "<br>" +

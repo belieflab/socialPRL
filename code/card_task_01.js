@@ -33,8 +33,42 @@ document.getElementById('nextButton').onclick = function() {
     // Show attrition stuff
     $(".attrition").css({"display": "block"});
 
+    // function translate(){
+    //    var begin; 
+    //   switch(language){
+    //     case 'english': 
+    //      begin='BEGIN';
+    //      break
+   
+    //     case 'french':
+    //      begin='XXX';
+    //      break
+   
+    //     case 'german':
+    //      begin='XXX';
+    //      break
+    //    }
+    // }
+    // translate();
     // reword next button
-    $('#nextButton').text("BEGIN");
+    //document.getElementById('nextButton').innerHTML='begin';
+    switch(language){
+      case 'english':
+        $('#nextButton').text('BEGIN');
+
+        break
+
+      case 'french':
+        $('#nextButton').text('XXX');
+
+        break
+
+      case 'german':
+        $('#nextButton').text('XXX');
+
+        break
+    }
+    //$('#nextButton').text(begin);
     document.getElementById("pass").innerHTML = ''; // hides validation success text
     // $('#nextButton').toggleClass("", "noCursor");
     $("button.noCursor").click(function(){

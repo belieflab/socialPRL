@@ -23,9 +23,9 @@ var keyMap = {
 };
 
 // LANGUAGE
-const language = 'english';
+//const language = 'english';
 //const language = 'french';
-// const language = 'german';
+//const language = 'german';
 
 
 // let turkprime_online = true;
