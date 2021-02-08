@@ -1,17 +1,13 @@
-<script>
-  // show page when loaded 
-  window.onload = function() {
-    $(".loading").css({display: "none"});
-    $(".consent").css({display: "block"});
-    $(".buttonHolder").css({display: "block"});
-  };
-</script>
+<div class="screening" style="background-color:darkgray; text-align:center; margin:35px; vertical-align:middle">
+<br>
+
 <div id = "consent">
+<h1 id="hide" style="text-align:center;">Study Consent Form</h1>
 <div class="loading centeredDiv">
     <h1 class="loading">Loading...</h1>
   </div>
   <div id="consentHolder" class="consent centeredDiv">
-  <h3 id="consentPreamble" class="consent">In order for us to conduct this test online, we need to include the standard consent form below. <br /> <br /> </h3>
+  <h3 id="consentPreamble" class="consent">In order for us to conduct this test online, we need to include the standard consent form below: <br /> <br /> </h3>
 
 <div id="consentForm" class="consent consent-box"> 
     <h2 id="consentHeading" class="consent">
@@ -65,4 +61,27 @@
     </p>
   </div>
   </div>
-  <button id="submitButton" class="loadMain" onclick="validateConsent()" type="button">CONSENT</button>
+
+  <button style="float:center; margin:35px; vertical-align:middle" id="submitButton" class="loadMain" onclick="validateConsent()" type="button">CONSENT</button></div>
+<div id="validation" style="display: none">
+    <br>
+    <form>
+</form>
+</div>
+<div>
+
+<div id="load" style="display: none">
+<h3 id='pass'>All validation rules were passed successfully. Click to load the experiment.</h3>
+<button id="nextButton" class="noCursor" onclick="startExperiment()">LOAD</button>
+<!-- <p id="nextButton" style="display: none" >please make sure you are in a quiet place. When you are ready to begin, click 'START'</p> -->
+<br>
+</div>
+<script type="text/javascript" src="../js/jquery-3.5.1.min.js"></script>
+<script>$("button.loadMain").click(function(){
+      $.getScript("../exp/lang.js");
+      $.getScript("../exp/rand.js");
+      $.getScript("../code/card_task_01.js");
+  }); </script>
+
+
+  
