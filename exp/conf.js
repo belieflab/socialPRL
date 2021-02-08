@@ -23,8 +23,8 @@ var keyMap = {
 };
 
 // LANGUAGE
-//const language = 'english';
-const language = 'french';
+const language = 'english';
+//const language = 'french';
 //const language = 'german';
 
 
@@ -39,25 +39,30 @@ const language = 'french';
 // var workerId = prompt("enter subjectID:");
 // var confirm_id = alert("You have entered:\n\n" + workerId + "\n\nIf incorrect, please refresh the browser and enter the correct ID.");
 
+let workerId = getParamFromURL( 'workerId' );
 
-// if (!isEmpty(workerId)) {
-//   Math.seedrandom(workerId);
-// } else {
-//   var this_seed = new Date().getTime();
-//   Math.seedrandom(this_seed);
-//   workerId = "AUNDEFINED_" + this_seed;
-// }
+if (!isEmpty(workerId)) {
+  Math.seedrandom(workerId);
+} else {
+  var this_seed = new Date().getTime();
+  Math.seedrandom(this_seed);
+  workerId = "AUNDEFINED_" + this_seed;
+}
 
-// choose seed based on mturk info. XXX Implement seeding based on manually input worker ID
-// if (!isEmpty(workerId)) {
-//     Math.seedrandom(workerId);
-// } else {
-//     var this_seed = new Date().getTime();
-//     Math.seedrandom(this_seed);
-//     workerId = "AUNDEFINED_" + this_seed;
-// }
-var link = "https://survey.az1.qualtrics.com/SE/?SID=SV_5jt7BivBUleMhWl&Q_JFE=0&workerId=" +
-workerId;
+//choose seed based on mturk info. XXX Implement seeding based on manually input worker ID
+if (!isEmpty(workerId)) {
+    Math.seedrandom(workerId);
+} else {
+    var this_seed = new Date().getTime();
+    Math.seedrandom(this_seed);
+    workerId = "AUNDEFINED_" + this_seed;
+}
+const qualtrics = "https://survey.az1.qualtrics.com/SE/?SID=SV_5jt7BivBUleMhWl&Q_JFE=0&workerId=" + workerId;
+
+
+// let workerId = getParamFromURL( 'workerId' );
+// const qualtrics = "https://yalesurvey.ca1.qualtrics.com/jfe/form/SV_0U3wW3G3HfY8Ie1?Q_JFE=qdg&workerId=";
+
 
 var refreshCount          = parseInt("<?php echo $_SESSION['refreshCount']; ?>");
 var dataDirectory         = '../data/';

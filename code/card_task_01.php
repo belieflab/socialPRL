@@ -37,7 +37,19 @@ include_once ("../db/config.php");
 <body onbeforeunload="return areYouSure()">
     <?php
       if ($turkprime_online == true) {
-        include_once "../include/consent.php";
+        switch($language){
+          case 'english':
+          include_once "../include/consent_english.php";
+          break;
+
+          case 'french':
+            include_once "../include/consent_french.php";
+            break;
+
+          case 'german':
+            include_once "../include/consent_german.php";
+            break;
+      }
         // echo'<br>';
         // echo'connected';
       } else if ($db_connection_status == true) {
@@ -58,9 +70,8 @@ include_once ("../db/config.php");
   <input required type="text" id="attritionAns" class="attrition" size="60" style="width:inherit; height:17px; font-size:15px; margin: 0 auto;" />
 </div>
 <div id="errorMessageHolder" class="error centeredDiv">
-  <p id="mobileBrowserErrorMessage">You cannot access this test from a mobile browser. Please use a desktop computer to complete the task.</p>
-  <p id="workerIDErrorMessage">You are ineligible for this task, since your worker ID has been recorded as participating in this task already. 
-    Please return the HIT.</p>
+  <p id="mobileBrowserErrorMessage"><script>mobileBrowserErrorMessage</script></p>
+  <p id="workerIDErrorMessage"><script>workerIDErrorMessage</script></p>
 </div>
 
 <div id="instructionsHolder" class="instructions centeredDiv">
@@ -126,7 +137,8 @@ include_once ("../db/config.php");
       let week;
 
       if (turkprime_online === true) {
-        
+
+    
       } else if (db_connection === false) {
         GUID = "";
         subjectID = "";

@@ -11,6 +11,9 @@ switch(language){
         var almostModelResponse = "I will answer open-ended questions";
         var errorMessage = "Please enter the requested text exactly into the box before clicking next!";
 
+        var mobileBrowserErrorMessage = "You cannot access this test from a mobile browser. Please use a desktop computer to complete the task.";
+        var workerIDErrorMessage = "You are ineligible for this task, since your worker ID has been recorded as participating in this task already. Please return the HIT."
+      
     
         //const consent = 'CONSENT';
         // Attrition instructions -- English
@@ -193,6 +196,9 @@ switch(language){
         var modelResponse = "XXX.";
         var almostModelResponse = "XXX";
         var errorMessage = "XXX";
+
+        var mobileBrowserErrorMessage = "XXX.";
+        var workerIDErrorMessage = "XXX."
 
     
         //const consent = 'CONSENT';
@@ -377,7 +383,9 @@ switch(language){
         var almostModelResponse = "XXX";
         var errorMessage = "XXX";
 
-    
+        var mobileBrowserErrorMessage = "XXX.";
+        var workerIDErrorMessage = "XXX."
+
         //const consent = 'CONSENT';
         // Attrition instructions -- German
 
@@ -470,7 +478,7 @@ switch(language){
                 breakText = "You have completed the task. Your final score is " + score + ".\n" + '<br>' +
                   "You have successfully completed the experiment and your data has been saved.\n" + '<br>' +
                   "To leave feedback on this task, please click the following link:\n" + '<br>' +
-                  "<a href="+feedbackLink+">Leave Task Feedback!</a>\n" + '<br>' +
+                  "<a href="+qualtrics+">Leave Task Feedback!</a>\n" + '<br>' +
                       // "Please wait for the experimenter to continue.\n"+ '<br>' +
                   "You may now close the expriment window at anytime.\n";
           
