@@ -28,8 +28,8 @@ if (file_exists($_SERVER["DOCUMENT_ROOT"] . '/config.php')) {
     // echo$db_connection_status;
     echo '<script type="text/javascript">let db_connection = false</script>';
     echo '<script type="text/javascript">language</script>';
-    $language = 'english';
-    // $language = 'french';
+    //$language = 'english';
+    $language = 'french';
     // $language = 'german';
     // switch('<script type="text/javascript">language</script>'){
 

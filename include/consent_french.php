@@ -2,9 +2,9 @@
 <br>
 
 <div id = "consent">
-<h1 id="hide" style="text-align:center;">XXX</h1>
+<h1 id="hide" style="text-align:center;">Étudier le formulaire de consentement</h1>
 <div class="loading centeredDiv">
-    <h1 class="loading">Loading...</h1>
+    <h1 class="loading">Chargement...</h1>
   </div>
   <div id="consentHolder" class="consent centeredDiv">
   <h3 id="consentPreamble" class="consent">Pour que nous puissions effectuer ce test en ligne, nous devons inclure le formulaire de consentement standard ci-dessous: <br /> <br /> </h3>
@@ -71,7 +71,7 @@
 <div>
 
 <div id="load" style="display: none">
-<h3 id='pass'>All validation rules were passed successfully. Click to load the experiment.</h3>
+<h3 id='pass'>Toutes les règles de validation ont été passées avec succès. Cliquez pour charger l'expérience.</h3>
 <button id="nextButton" class="noCursor" onclick="startExperiment()"><script>load</script></button>
 <!-- <p id="nextButton" style="display: none" >please make sure you are in a quiet place. When you are ready to begin, click 'START'</p> -->
 <br>

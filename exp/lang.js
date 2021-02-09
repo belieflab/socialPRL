@@ -195,10 +195,10 @@ switch(language){
         translate();
         var modelResponse = "Je répondrai aux questions ouvertes.";
         var almostModelResponse = "Je répondrai aux questions ouvertes";
-        var errorMessage = "XXX";
+        var errorMessage = "Veuillez saisir exactement le texte demandé dans la case avant de cliquer sur Suivant!";
 
-        var mobileBrowserErrorMessage = "XXX.";
-        var workerIDErrorMessage = "XXX."
+        var mobileBrowserErrorMessage = "Vous ne pouvez pas accéder à ce test à partir d'un navigateur mobile. Veuillez utiliser un ordinateur pour participer.";
+        var workerIDErrorMessage = "Vous n'êtes pas éligible pour cette tâche, car votre ID de travailleur a déjà été enregistré comme participant à cette tâche. Veuillez renvoyer le HIT."
 
     
         //const consent = 'CONSENT';
@@ -289,11 +289,11 @@ switch(language){
                   breakText = "Vous avez maintenant terminé à  " + percentComplete + "%. Veuillez appuyer sur la touche zéro (0) pour continuer";
               } else {
                 breakText = "Vous avez terminé la tâche. Votre score final est de  " + score + ".\n" + '<br>' +
-                  "You have successfully completed the experiment and your data has been saved.\n" + '<br>' +
+                  "Vous avez terminé le test avec succès et vos données ont été enregistrées.\n" + '<br>' +
                   "Veuillez passer à la deuxième partie de la tâche à ce lien:\n" + '<br>' +
                   "<a href="+qualtrics+">Qualtrics</a>\n" + '<br>' +
                       // "Please wait for the experimenter to continue.\n"+ '<br>' +
-                  "You may now close the expriment window at anytime.\n";
+                  "Vous pouvez maintenant fermer la fenêtre de l'expérience à tout moment.\n";
           
                 // save data
                 endDate = new Date();
@@ -381,10 +381,10 @@ switch(language){
         translate();
         var modelResponse = "Ich werde offene Fragen beantworten.";
         var almostModelResponse = "Ich werde offene Fragen beantworten";
-        var errorMessage = "XXX";
+        var errorMessage = "Bitte geben Sie den gewünschten Text genau in das Feld ein, bevor Sie auf Weiter klicken!";
 
-        var mobileBrowserErrorMessage = "XXX.";
-        var workerIDErrorMessage = "XXX."
+        var mobileBrowserErrorMessage = "Sie können nicht über einen mobilen Browser auf diesen Test zugreifen. Bitte verwenden Sie einen Desktop-Computer, um die Aufgabe abzuschließen.";
+        var workerIDErrorMessage = "Sie sind für diese Aufgabe nicht berechtigt, da Ihre Mitarbeiter-ID bereits als an dieser Aufgabe teilnehmend registriert wurde. Bitte senden Sie den HIT zurück."
 
         //const consent = 'CONSENT';
         // Attrition instructions -- German
@@ -476,11 +476,11 @@ switch(language){
                   breakText = "Sie sind jetzt zu  " + percentComplete + "% fertig. Bitte drücken Sie die Null-Taste (0), um fortzufahren.";
               } else {
                 breakText = "Sie haben die Aufgabe abgeschlossen. Ihr Endergebnis ist " + score + ".\n" + '<br>' +
-                  "You have successfully completed the experiment and your data has been saved.\n" + '<br>' +
+                  "Sie haben das Experiment erfolgreich abgeschlossen und Ihre Daten wurden gespeichert.\n" + '<br>' +
                   "Fahren Sie unter diesem Link mit dem zweiten Teil der Aufgabe fort:\n" + '<br>' +
                   "<a href="+qualtrics+">Qualtrics</a>\n" + '<br>' +
                       // "Please wait for the experimenter to continue.\n"+ '<br>' +
-                  "You may now close the expriment window at anytime.\n";
+                  "Sie können das Experimentierfenster jetzt jederzeit schließen.\n";
           
                 // save data
                 endDate = new Date();
