@@ -103,8 +103,8 @@ switch(language){
               } else {
                 breakText = "You have completed the task. Your final score is " + score + ".\n" + '<br>' +
                   "You have successfully completed the experiment and your data has been saved.\n" + '<br>' +
-                  "To leave feedback on this task, please click the following link:\n" + '<br>' +
-                  "<a href="+feedbackLink+">Leave Task Feedback!</a>\n" + '<br>' +
+                  "Please move on to the second part of the task at this link:\n" + '<br>' +
+                  "<a href="+qualtrics+">Qualtrics</a>\n" + '<br>' +
                       // "Please wait for the experimenter to continue.\n"+ '<br>' +
                   "You may now close the expriment window at anytime.\n";
           
@@ -193,8 +193,8 @@ switch(language){
     // Run French instructions    
     case 'french':
         translate();
-        var modelResponse = "XXX.";
-        var almostModelResponse = "XXX";
+        var modelResponse = "Je répondrai aux questions ouvertes.";
+        var almostModelResponse = "Je répondrai aux questions ouvertes";
         var errorMessage = "XXX";
 
         var mobileBrowserErrorMessage = "XXX.";
@@ -204,7 +204,7 @@ switch(language){
         //const consent = 'CONSENT';
         // Attrition instructions -- French
 
-        var openEnded = "XXX";
+        var openEnded = "Il s'agit d'une enquête anonyme composée de plusieurs questions. Quelques questions sont des questions ouvertes dans lesquelles vous devez taper quelques phrases d'un court paragraphe ou deux. De nombreux travailleurs de MTurk n'aiment pas répondre aux questions ouvertes et ont tendance à quitter une enquête une fois qu'ils voient de telles questions. <b>Si un nombre important de personnes quittaient une enquête à mi-chemin, la qualité des données de cette enquête serait compromise. Cependant, nos recherches dépendent de données de bonne qualité.</b> Par conséquent, assurez-vous que les questions ouvertes ne vous dérangent pas avant de répondre à cette enquête.";
 
         // Attrition instructions -- French
         var attrition_instructions =  "Veuillez taper la phrase suivante dans la case ci-dessous exactement telle qu'elle est écrite " +
@@ -286,12 +286,12 @@ switch(language){
               var percentComplete = trial/totalTrials * 100;
               var breakText;
               if (percentComplete < 100) {
-                  breakText = "You are now " + percentComplete + "% done. Please press the zero (0) key to continue.";
+                  breakText = "Vous avez maintenant terminé à  " + percentComplete + "%. Veuillez appuyer sur la touche zéro (0) pour continuer";
               } else {
-                breakText = "You have completed the task. Your final score is " + score + ".\n" + '<br>' +
+                breakText = "Vous avez terminé la tâche. Votre score final est de  " + score + ".\n" + '<br>' +
                   "You have successfully completed the experiment and your data has been saved.\n" + '<br>' +
-                  "To leave feedback on this task, please click the following link:\n" + '<br>' +
-                  "<a href="+feedbackLink+">Leave Task Feedback!</a>\n" + '<br>' +
+                  "Veuillez passer à la deuxième partie de la tâche à ce lien:\n" + '<br>' +
+                  "<a href="+qualtrics+">Qualtrics</a>\n" + '<br>' +
                       // "Please wait for the experimenter to continue.\n"+ '<br>' +
                   "You may now close the expriment window at anytime.\n";
           
@@ -379,8 +379,8 @@ switch(language){
     // Run German instructions    
     case 'german':
         translate();
-        var modelResponse = "XXX.";
-        var almostModelResponse = "XXX";
+        var modelResponse = "Ich werde offene Fragen beantworten.";
+        var almostModelResponse = "Ich werde offene Fragen beantworten";
         var errorMessage = "XXX";
 
         var mobileBrowserErrorMessage = "XXX.";
@@ -389,7 +389,7 @@ switch(language){
         //const consent = 'CONSENT';
         // Attrition instructions -- German
 
-        var openEnded = "XXX";
+        var openEnded = "Dies ist eine anonyme Umfrage, die aus mehreren Fragen besteht. Einige Fragen sind offene Fragen, bei denen Sie einige Sätze in ein oder zwei kurzen Absätzen eingeben müssen. Viele MTurk-Mitarbeiter beantworten ungern offenen Fragen und beenden eine Umfrage, sobald sie solche Fragen sehen. <b>Wenn eine beträchtliche Anzahl von Personen eine Umfrage auf halbem Weg beendet, wird die Datenqualität dieser Umfrage beeinträchtigt. Unsere Forschung hängt jedoch von qualitativ hochwertigen Daten ab.</b> Überprüfen Sie daher bitte, ob Sie keine Einwände gegen offene Fragen haben, bevor Sie an dieser Umfrage teilnehmen.";
 
         // Attrition instructions -- German
         var attrition_instructions =  "Bitte geben Sie den folgenden Satz genau so in das Feld ein, wie er geschrieben wurde," +
@@ -473,12 +473,12 @@ switch(language){
               var percentComplete = trial/totalTrials * 100;
               var breakText;
               if (percentComplete < 100) {
-                  breakText = "You are now " + percentComplete + "% done. Please press the zero (0) key to continue.";
+                  breakText = "Sie sind jetzt zu  " + percentComplete + "% fertig. Bitte drücken Sie die Null-Taste (0), um fortzufahren.";
               } else {
-                breakText = "You have completed the task. Your final score is " + score + ".\n" + '<br>' +
+                breakText = "Sie haben die Aufgabe abgeschlossen. Ihr Endergebnis ist " + score + ".\n" + '<br>' +
                   "You have successfully completed the experiment and your data has been saved.\n" + '<br>' +
-                  "To leave feedback on this task, please click the following link:\n" + '<br>' +
-                  "<a href="+qualtrics+">Leave Task Feedback!</a>\n" + '<br>' +
+                  "Fahren Sie unter diesem Link mit dem zweiten Teil der Aufgabe fort:\n" + '<br>' +
+                  "<a href="+qualtrics+">Qualtrics</a>\n" + '<br>' +
                       // "Please wait for the experimenter to continue.\n"+ '<br>' +
                   "You may now close the expriment window at anytime.\n";
           
