@@ -60,14 +60,13 @@ if (!isEmpty(workerId)) {
 const qualtrics = "https://survey.az1.qualtrics.com/SE/?SID=SV_5jt7BivBUleMhWl&Q_JFE=0&workerId=" + workerId;
 
 
-// let workerId = getParamFromURL( 'workerId' );
-// const qualtrics = "https://yalesurvey.ca1.qualtrics.com/jfe/form/SV_0U3wW3G3HfY8Ie1?Q_JFE=qdg&workerId=";
+
 
 
 var refreshCount          = parseInt("<?php echo $_SESSION['refreshCount']; ?>");
 var dataDirectory         = '../data/';
 var stimulusDirectory     = '../stimuli/';
-var csvPrefix             = "socialPRL_";
+var csvPrefix             = "prl_";
 var csvExtension          = '.csv';
 
 
@@ -167,7 +166,7 @@ for (var position in positionToColor) {
   $(thisID).attr('src', deckImagePrefix + color + deckImageExtension);
 }
 
-var infix          = "-socialPRL-";
+var infix          = "-pr1-";
 var suffix         = "-a";
 var completionCode = generateCompletionCode(infix, suffix);
 

@@ -27,7 +27,7 @@ if (file_exists($_SERVER["DOCUMENT_ROOT"] . '/config.php')) {
     echo '<script type="text/javascript">let turkprime_online = true</script>';
     // echo$db_connection_status;
     echo '<script type="text/javascript">let db_connection = false</script>';
-    echo '<script type="text/javascript"> language </script>';
+    echo '<script type="text/javascript">language</script>';
     $language = 'english';
     // $language = 'french';
     // $language = 'german';
