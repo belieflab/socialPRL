@@ -31,7 +31,7 @@ if (file_exists($_SERVER["DOCUMENT_ROOT"] . '/config.php')) {
     $language = 'english';
     // $language = 'french';
     // $language = 'german';
-    // switch('<script type="text/javascript"> language </script>'){
+    // switch('<script type="text/javascript">language</script>'){
 
     //   case 'english':
     //     $language = 'english';
