@@ -152,14 +152,14 @@ function deepCopy(obj) {
   }
   
   // XXX implement python
-  function addToParticipantList(workerID, firstHalfProbabilities, secondHalfProbabilities, startDate, endDate, fileName){
+  function addToParticipantList(workerId, firstHalfProbabilities, secondHalfProbabilities, startDate, endDate, fileName){
     $.ajax({
       type:'post',
       async: false,
       cache: false,
       url: 'addToParticipantList.py', // this is the path to the PHP script that will handle saving data
       data: {
-        workerID: workerID,
+        workerId: workerId,
         fileName: fileName,
         firstHalfProbabilities: JSON.stringify(firstHalfProbabilities),
         secondHalfProbabilities: JSON.stringify(secondHalfProbabilities),

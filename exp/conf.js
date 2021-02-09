@@ -67,7 +67,7 @@ const qualtrics = "https://survey.az1.qualtrics.com/SE/?SID=SV_5jt7BivBUleMhWl&Q
 var refreshCount          = parseInt("<?php echo $_SESSION['refreshCount']; ?>");
 var dataDirectory         = '../data/';
 var stimulusDirectory     = '../stimuli/';
-var csvPrefix             = "prl_";
+var csvPrefix             = "socialPRL_";
 var csvExtension          = '.csv';
 
 
@@ -167,7 +167,7 @@ for (var position in positionToColor) {
   $(thisID).attr('src', deckImagePrefix + color + deckImageExtension);
 }
 
-var infix          = "-pr1-";
+var infix          = "-socialPRL-";
 var suffix         = "-a";
 var completionCode = generateCompletionCode(infix, suffix);
 
