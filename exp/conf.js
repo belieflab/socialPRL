@@ -23,8 +23,8 @@ var keyMap = {
 };
 
 // LANGUAGE
-//const language = 'english';
-const language = 'french';
+const language = 'english';
+//const language = 'french';
 //const language = 'german';
 
 

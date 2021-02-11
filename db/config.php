@@ -44,7 +44,6 @@ if (file_exists($_SERVER["DOCUMENT_ROOT"] . '/config.php')) {
     //     $language = 'german';
     //     break;
     // }
-  }
   } else {
     // echo$db_connection_status;
     echo '<script type="text/javascript">let db_connection = false</script>';
