@@ -5,6 +5,7 @@ if (file_exists($_SERVER["DOCUMENT_ROOT"] . '/config.php')) {
   // echo$_SERVER["DOCUMENT_ROOT"];
   $studyId = $_GET["studyId"];
   $candidateId = $_GET["candidateId"];
+  $workerId = $_GET["workerId"];
   if (isset($candidateId)) {
     $query = "SELECT GUID from phi where sub_id = $candidateId";
     $prepare = $db_connection->prepare($query);
@@ -21,15 +22,15 @@ if (file_exists($_SERVER["DOCUMENT_ROOT"] . '/config.php')) {
   $ageInMonths = $_GET["interview_age"];
   $visit = $_GET["visit"];
   $week = $_GET["week"];
-  } else {
+  } else if(isset($workerId)){
+   
     $db_connection_status = null;
     $turkprime_online = true;
+   
     echo '<script type="text/javascript">let turkprime_online = true</script>';
-    // echo$db_connection_status;
-    echo '<script type="text/javascript">let db_connection = false</script>';
     echo '<script type="text/javascript">language</script>';
-    //$language = 'english';
-    $language = 'french';
+    $language = 'english';
+    //$language = 'french';
     // $language = 'german';
     // switch('<script type="text/javascript">language</script>'){
 
@@ -43,6 +44,11 @@ if (file_exists($_SERVER["DOCUMENT_ROOT"] . '/config.php')) {
     //     $language = 'german';
     //     break;
     // }
+  }
+  } else {
+    // echo$db_connection_status;
+    echo '<script type="text/javascript">let db_connection = false</script>';
+
     $subjectKey = '';
     $consortId = '';
     $sexAtBirth = '';
