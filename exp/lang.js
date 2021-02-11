@@ -101,6 +101,11 @@ switch(language){
               if (percentComplete < 100) {
                   breakText = "You are now " + percentComplete + "% done. Please press the zero (0) key to continue.";
               } else {
+
+                $(document).ready(function(){
+                    $("body").addClass("showCursor");
+                    }); 
+              
                 breakText = "You have completed the task. Your final score is " + score + ".\n" + '<br>' +
                   "You have successfully completed the experiment and your data has been saved.\n" + '<br>' +
                   "Please move on to the second part of the task at this link:\n" + '<br>' +
@@ -288,6 +293,11 @@ switch(language){
               if (percentComplete < 100) {
                   breakText = "Vous avez maintenant terminé à  " + percentComplete + "%. Veuillez appuyer sur la touche zéro (0) pour continuer";
               } else {
+
+                $(document).ready(function(){
+                    $("body").addClass("showCursor");
+                    }); 
+
                 breakText = "Vous avez terminé la tâche. Votre score final est de  " + score + ".\n" + '<br>' +
                   "Vous avez terminé le test avec succès et vos données ont été enregistrées.\n" + '<br>' +
                   "Veuillez passer à la deuxième partie de la tâche à ce lien:\n" + '<br>' +
@@ -475,6 +485,12 @@ switch(language){
               if (percentComplete < 100) {
                   breakText = "Sie sind jetzt zu  " + percentComplete + "% fertig. Bitte drücken Sie die Null-Taste (0), um fortzufahren.";
               } else {
+
+                $(document).ready(function(){
+                    $("body").addClass("showCursor");
+                    }); 
+
+                    
                 breakText = "Sie haben die Aufgabe abgeschlossen. Ihr Endergebnis ist " + score + ".\n" + '<br>' +
                   "Sie haben das Experiment erfolgreich abgeschlossen und Ihre Daten wurden gespeichert.\n" + '<br>' +
                   "Fahren Sie unter diesem Link mit dem zweiten Teil der Aufgabe fort:\n" + '<br>' +
