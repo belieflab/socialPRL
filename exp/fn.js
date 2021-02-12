@@ -273,13 +273,13 @@ function deepCopy(obj) {
        break
  
       case 'french': 
-       consent='XXX';
-       load='XXX';
+       consent='CONSENTEMENT';
+       load='CHARGE';
        break
  
       case 'german': 
-       consent='XXX';
-       load='XXX';
+       consent='ZUSTIMMUNG';
+       load='BELASTUNG';
        break
      }
    document.getElementById('submitButton').innerHTML=consent;

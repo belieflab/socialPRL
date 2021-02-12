@@ -2,16 +2,16 @@
 <br>
 
 <div id = "consent">
-<h1 id="hide" style="text-align:center;">YYY</h1>
+<h1 id="hide" style="text-align:center;">Einverständniserklärung studieren</h1>
 <div class="loading centeredDiv">
-    <h1 class="loading">Loading...</h1>
+    <h1 class="loading">Wird geladen...</h1>
   </div>
   <div id="consentHolder" class="consent centeredDiv">
-  <h3 id="consentPreamble" class="consent">In order for us to conduct this test online, we need to include the standard consent form below: <br /> <br /> </h3>
+  <h3 id="consentPreamble" class="consent">Damit wir diesen Test online durchführen können, müssen wir das unten stehende Standard-Einverständnisformular einfügen: <br /> <br /> </h3>
 
 <div id="consentForm" class="consent consent-box"> 
     <h2 id="consentHeading" class="consent">
-      CONSENT FOR PARTICIPATION IN A RESERCH PROJECT 200 FR. 1 (2016-2)
+    ZUSTIMMUNG ZUR TEILNAHME AN EINEM FORSCHUNGSPROJEKT 200 FR. 1 (2016-2)
       <br>
       YALE UNIVERSITY SCHOOL OF MEDICINE CONNECTICUT MENTAL HEALTH CENTER
     </h2> 
@@ -20,43 +20,43 @@
       
  </h2>
     <p id="consentInstructions" class="consent">
-      <b>Study Title:</b> Beliefs and Personality Traits
+      <b>Studientitel:</b> Überzeugungen und Persönlichkeitsmerkmale
       <br><br>
-      <b>Principal Investigator:</b> Philip R. Corlett, PhD
+      <b>Versuchsleiter:</b> Philip R. Corlett, PhD
       <br><br>
-      <b>Funding Source:</b> department funds
+      <b>Finanzierungsquelle:</b> Abteilungsmittel
       <br><br>
-      <u><b>Invitation to Participate and Description of Project</b></u>
+      <u><b>Einladung zur Teilnahme und Beschreibung des Projekts</b></u>
       <br>
-      You are invited to participate in a research study that concerns psychological processes related to beliefs and personality traits. Due to the nature of psychology experiments, we cannot explain the precise purpose of the experiment until after the session is over. Afterwards, the experimenter will be happy to answer any questions you might have about the purpose of the study.
+      Sie sind eingeladen, an einer Forschungsstudie teilzunehmen, die sich mit psychologischen Prozessen im Zusammenhang mit Überzeugungen und Persönlichkeitsmerkmalen befasst. Aufgrund der Art von psychologischen Experimenten  können wir den genauen Zweck des Experiments erst nach Beendigung der Sitzung erklären. Anschließend beantwortet der Experimentator gerne alle Fragen, die Sie zum Zweck der Studie haben.
       <br><br>
-      <u><b>Description of Procedures</b></u>
+      <u><b>Beschreibung der Verfahren</b></u>
       <br>
-      If you agree to participate in this study, this Human Intelligence Task (HIT) will require you to (1) play a computer game using the computer mouse or keys on your keyboard and (2) answer simple questions about your demographics, health (including mental health), beliefs, and personality through an interactive web survey. You will never be asked for personally identifiable information such as your name, address, or date of birth. 
+      Wenn Sie der Teilnahme an dieser Studie zustimmen, müssen Sie für die "Human Intelligence Task" (HIT) (1) ein Computerspiel mit der Computermaus oder den Tasten auf Ihrer Tastatur spielen und (2) einfache Fragen zu Ihrer Herkunft und Gesundheit (einschließlich zu Ihrer psychischen Gesundheit) , sowie zu Ihren Überzeugungen und Ihrer Persönlichkeit in einer interaktiven Webumfrage beantworten. Sie werden niemals nach personenbezogenen Daten wie Ihrem Namen, Ihrer Adresse oder Ihrem Geburtsdatum gefragt. 
       <br>
-      The experiment is designed to take approximately 1 hour. You will have up to six hours to complete the experiment and submit codes for credit. 
+      Das Experiment dauert ungefähr 1 Stunde. Sie haben bis zu sechs Stunden Zeit, um das Experiment abzuschließen und Codes zur Gutschrift einzureichen. 
       <br><br>
-      <u><b>Risks and Inconveniences</b></u>
+      <u><b>Risiken und Unannehmlichkeiten</b></u>
       <br>
-      There are little to no risks associated with this study. Some individuals may experience mild boredom. 
+      Mit dieser Studie sind nur geringe bis keine Risiken verbunden. Einige Personen können leichte Langeweile erleben. 
       <br><br>
-      <u><b>Economic Considerations</b></u>
+      <u><b>Wirtschaftliche Überlegungen</b></u>
       <br>
-      You will receive the reward specified on the Mechanical-Turk HIT for completing both the game and the questionnaire. Payment for completion of the HIT is $6.00 with a $2.00 bonus to individuals who score in the top 25% on the card game. Upon finishing the game and submitting the questionnaire, you will receive code numbers. Please record these two code numbers and submit them for payment. 
+      Sie erhalten die auf dem Mechanical-Turk HIT angegebene Belohnung, wenn Sie sowohl das Spiel abschließen und den Fragebogen ausfüllen. Die Zahlung für den Abschluss des HIT beträgt 6,00 USD mit einem Bonus von 2,00 USD für Personen, die zu den besten 25% im Kartenspiel gehören. Nach Beendigung des Spiels und Absenden des Fragebogens erhalten Sie eine Umfrage-Codenummer. Bitte notieren Sie diese Codenummer und geben Sie sie zur Auszahlung an. 
       <br><br>
-      <u><b>Confidentiality</b></u>
+      <u><b>Vertraulichkeit</b></u>
       <br>
-      We will never ask for your name, birth date, email or any other identifying piece of information. Your data will be pooled with those of others, and your responses will be completely anonymous. We will keep this data indefinitely for possible use in scientific publications and presentations. 
+      Wir werden Sie niemals nach Ihrem Namen, Ihrem Geburtsdatum, Ihrer E-Mail-Adresse oder anderen identifizierenden Informationen fragen. Ihre Daten werden mit denen anderer gepoolt und Ihre Antworten sind vollständig anonym. Wir werden diese Daten für eine mögliche Verwendung in wissenschaftlichen Veröffentlichungen und Präsentationen auf unbestimmte Zeit aufbewahren. 
       <br>
-      The researcher will not know your name, and no identifying information will be connected to your survey answers in any way. The survey is therefore anonymous. However, your account is associated with an mTurk number that the researcher has to be able to see in order to pay you, and in some cases these numbers are associated with public profiles which could, in theory, be searched. For this reason, though the researcher will not be looking at anyone’s public profiles, the fact of your participation in the research (as opposed to your actual survey responses) is technically considered “confidential” rather than truly anonymous.
+      Der Forscher kennt Ihren Namen nicht und es werden in keiner Weise identifizierende Informationen mit Ihren Umfrageantworten verknüpft. Die Umfrage ist daher anonym. Ihr Konto ist jedoch mit einer mTurk-Nummer verknüpft, die der Forscher sehen muss, um Sie bezahlen zu können. In einigen Fällen sind diese Nummern mit öffentlichen Profilen verknüpft, die theoretisch durchsucht werden könnten. Aus diesem Grund und obwohl der Forscher die öffentlichen Profile von niemandem betrachtet, wird die Tatsache Ihrer Teilnahme an der Forschung (im Gegensatz zu Ihren tatsächlichen Umfrageantworten) als eher "vertraulich" als wirklich anonym angesehen.
       <br><br>
-      <u><b>Voluntary Participation</b></u>
+      <u><b>Freiwillige Teilnahme</b></u>
       <br>
-      Your participation in this study is completely voluntary. You are free to decline to participate or to end participation at any time by simply closing your browser window. However, please note that you must submit both the computer game and questionnaire in order to receive payment. You may decline answering any question by selecting the designated alternative response (e.g., “I do not wish to answer”). Declining questions will not affect payment.
+      Ihre Teilnahme an dieser Studie ist völlig freiwillig. Sie können die Teilnahme jederzeit ablehnen oder beenden, indem Sie einfach Ihr Browserfenster schließen. Bitte beachten Sie jedoch, dass Sie sowohl das Computerspiel als auch den Fragebogen einreichen müssen, um die Zahlung zu erhalten. Sie können die Beantwortung einer Frage ablehnen, indem Sie die angegebene alternative Antwort auswählen (z. B. "Ich möchte nicht antworten"). Die Ablehnung von Fragen wirkt sich nicht auf die Zahlung aus.
       <br><br>
-      <u><b>Questions or Concerns</b></u>
+      <u><b>Fragen oder Bedenken</b></u>
       <br>
-      If you have any questions or concerns regarding the experiment, you may contact us here at the lab by emailing BLAMLabRequester@gmail.com If you have general questions about your rights as a research participant, you may contact the Yale University Human Investigation Committee at 203-785-4688 or human.subjects@yale.edu (HSC# 2000022111).
+      Wenn Sie Fragen oder Bedenken bezüglich des Experiments haben, können Sie uns hier im Labor per E-Mail an BLAMLabRequester@gmail.com kontaktieren. Wenn Sie allgemeine Fragen zu Ihren Rechten als Forschungsteilnehmer haben, können Sie sich unter 203-785-4688 oder human.subjects@yale.edu (HSC # 2000022111) an das Human Investigation Committee der Yale University wenden.
 
     </p>
   </div>
@@ -71,7 +71,7 @@
 <div>
 
 <div id="load" style="display: none">
-<h3 id='pass'>All validation rules were passed successfully. Click to load the experiment.</h3>
+<h3 id='pass'>Alle Validierungsregeln wurden erfolgreich bestanden. Klicken Sie hier, um das Experiment zu laden.</h3>
 <button id="nextButton" class="noCursor" onclick="startExperiment()"><script>load</script></button>
 <!-- <p id="nextButton" style="display: none" >please make sure you are in a quiet place. When you are ready to begin, click 'START'</p> -->
 <br>

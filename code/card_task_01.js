@@ -60,12 +60,12 @@ document.getElementById('nextButton').onclick = function() {
         break
 
       case 'french':
-        $('#nextButton').text('XXX');
+        $('#nextButton').text('COMMENCER');
 
         break
 
       case 'german':
-        $('#nextButton').text('XXX');
+        $('#nextButton').text('START');
 
         break
     }

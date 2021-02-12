@@ -5,7 +5,30 @@ if (file_exists($_SERVER["DOCUMENT_ROOT"] . '/config.php')) {
   // echo$_SERVER["DOCUMENT_ROOT"];
   $studyId = $_GET["studyId"];
   $candidateId = $_GET["candidateId"];
-  if (isset($candidateId)) {
+  $workerId = $_GET["workerId"];
+  if(isset($workerId)){
+   
+    $db_connection_status = false;
+    $turkprime_online = true;
+   
+    echo '<script type="text/javascript">let turkprime_online = true</script>';
+    echo '<script type="text/javascript">language</script>';
+    $language = 'english';
+    //$language = 'french';
+    // $language = 'german';
+    // switch('<script type="text/javascript">language</script>'){
+
+    //   case 'english':
+    //     $language = 'english';
+    //     break;
+    //   case 'french':  
+    //     $language = 'french';
+    //     break;
+    //   case 'german':  
+    //     $language = 'german';
+    //     break;
+    // }
+  } else if (isset($candidateId)) {
     $query = "SELECT GUID from phi where sub_id = $candidateId";
     $prepare = $db_connection->prepare($query);
     $prepare->execute();
@@ -22,27 +45,9 @@ if (file_exists($_SERVER["DOCUMENT_ROOT"] . '/config.php')) {
   $visit = $_GET["visit"];
   $week = $_GET["week"];
   } else {
-    $db_connection_status = null;
-    $turkprime_online = true;
-    echo '<script type="text/javascript">let turkprime_online = true</script>';
     // echo$db_connection_status;
     echo '<script type="text/javascript">let db_connection = false</script>';
-    echo '<script type="text/javascript">language</script>';
-    $language = 'english';
-    // $language = 'french';
-    // $language = 'german';
-    // switch('<script type="text/javascript">language</script>'){
 
-    //   case 'english':
-    //     $language = 'english';
-    //     break;
-    //   case 'french':  
-    //     $language = 'french';
-    //     break;
-    //   case 'german':  
-    //     $language = 'german';
-    //     break;
-    // }
     $subjectKey = '';
     $consortId = '';
     $sexAtBirth = '';
