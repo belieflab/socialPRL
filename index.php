@@ -22,7 +22,7 @@ include_once ("db/config.php");
   <meta name="googlebot" content="noindex, nofollow">
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <!-- <title>Probabalistic Reversal Task</title> -->
-  <title>3-PRLT</title>
+  <title>Social PRL</title>
   <script>
 
     //onbeforeunload in body
