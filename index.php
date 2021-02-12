@@ -10,7 +10,7 @@ header('Access-Control-Allow-Origin: *'); #necessary to make CSV downloading wor
 ?>
 
 <?php
-include_once ("db/config.php");
+require_once ("db/config.php");
 ?>
 
 
@@ -24,14 +24,14 @@ include_once ("db/config.php");
   <!-- <title>Probabalistic Reversal Task</title> -->
   <title>Social PRL</title>
   <script>
-
     //onbeforeunload in body
     function areYouSure() {
     return "Write something clever here...";
   }
   areYouSure();
   </script>
-  
+  <!-- set js language variable from php variable in config.php -->
+  <script>const language = "<?php echo$language?>";</script>
 </head>
 
 <body onbeforeunload="return areYouSure()">
@@ -137,7 +137,6 @@ include_once ("db/config.php");
       let week;
 
       if (turkprime_online === true) {
-
     
       } else if (db_connection === false) {
         GUID = "";

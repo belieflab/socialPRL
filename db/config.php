@@ -10,24 +10,25 @@ if (file_exists($_SERVER["DOCUMENT_ROOT"] . '/config.php')) {
    
     $db_connection_status = false;
     $turkprime_online = true;
-   
-    // echo '<script type="text/javascript">let turkprime_online = true</script>';
-    echo '<script type="text/javascript">language = "english";</script>';
-    $language = 'english';
-    //$language = 'french';
-    // $language = 'german';
-    // switch('<script type="text/javascript">language</script>'){
 
-    //   case 'english':
-    //     $language = 'english';
-    //     break;
-    //   case 'french':  
-    //     $language = 'french';
-    //     break;
-    //   case 'german':  
-    //     $language = 'german';
-    //     break;
-    // }
+    /* SELECT A LANGUAGE */
+    $language = 'english';
+    // $language = 'french';
+    // $language = 'german';
+
+    /* assign PHP variable to JS variable */
+    switch($language){
+      case 'english':
+        '<script type="text/javascript">language = "english";</script>';
+        break;
+      case 'french':  
+        '<script type="text/javascript">language = "french";</script>';
+        break;
+      case 'german':  
+        '<script type="text/javascript">language = "german";</script>';
+        break;
+    }
+
   } else if (isset($candidateId)) {
     $query = "SELECT GUID from phi where sub_id = $candidateId";
     $prepare = $db_connection->prepare($query);

@@ -222,6 +222,139 @@ function deepCopy(obj) {
     });
   }
   
+
+  function reset() {
+    trialStartTime = Date.now();
+      if (breakTrials.includes(trial)) {
+        breakOn = true;
+      keysAllowed = true;
+  
+      // re-randomize deck contingencies
+      randomizeDecksOn = true;
+  
+      var percentComplete = trial/totalTrials * 100;
+      var breakText;
+      if (percentComplete < 100) {
+          switch(language) {
+            case "english":
+              breakText = "You are now " + percentComplete + "% done. Please press the zero (0) key to continue.";
+              break;
+            case "french":
+              breakText = "Vous avez maintenant terminé à  " + percentComplete + "%. Veuillez appuyer sur la touche zéro (0) pour continuer";
+              break;
+            case "german":
+              breakText = "Sie sind jetzt zu  " + percentComplete + "% fertig. Bitte drücken Sie die Null-Taste (0), um fortzufahren.";
+              break;
+          }
+      } else {
+
+        $(document).ready(function(){
+            $("body").addClass("showCursor");
+            });
+        switch(language) {
+          case "english":
+            breakText = "You have completed the task. Your final score is " + score + ".\n" + '<br>' +
+              "You have successfully completed the experiment and your data has been saved.\n" + '<br>' +
+              "Please move on to the second part of the task at this link:\n" + '<br>' +
+              "<a href="+qualtrics+">Qualtrics</a>\n" + '<br>' +
+                  // "Please wait for the experimenter to continue.\n"+ '<br>' +
+              "You may now close the expriment window at anytime.\n";
+              break;
+            case "french":
+              breakText = "Vous avez terminé la tâche. Votre score final est de  " + score + ".\n" + '<br>' +
+                "Vous avez terminé le test avec succès et vos données ont été enregistrées.\n" + '<br>' +
+                "Veuillez passer à la deuxième partie de la tâche à ce lien:\n" + '<br>' +
+                "<a href="+qualtrics+">Qualtrics</a>\n" + '<br>' +
+                    // "Please wait for the experimenter to continue.\n"+ '<br>' +
+                "Vous pouvez maintenant fermer la fenêtre de l'expérience à tout moment.\n";
+                break;
+            case "german":
+              breakText = "Sie haben die Aufgabe abgeschlossen. Ihr Endergebnis ist " + score + ".\n" + '<br>' +
+                "Sie haben das Experiment erfolgreich abgeschlossen und Ihre Daten wurden gespeichert.\n" + '<br>' +
+                "Fahren Sie unter diesem Link mit dem zweiten Teil der Aufgabe fort:\n" + '<br>' +
+                "<a href="+qualtrics+">Qualtrics</a>\n" + '<br>' +
+                    // "Please wait for the experimenter to continue.\n"+ '<br>' +
+                "Sie können das Experimentierfenster jetzt jederzeit schließen.\n";
+                break;
+        };
+        // save data
+        endDate = new Date();
+  
+        // check if we're excluding data
+        var this_workerId_used_before = check_workerId_used_before( workerId, pastParticipantList );
+  
+        if ( (this_workerId_used_before) || (refreshCount > 0) ) {
+          excludeThisSubject = true;
+          if (this_workerId_used_before) {
+            excludedReason = 'duplicate_worker';
+          } else if (refreshCount > 0) {
+            excludedReason = 'refreshed_experiment_page';
+          }
+        }
+  
+        saveData();
+        addToParticipantList(workerId, firstHalfProbabilities, secondHalfProbabilities,  startDate, endDate, pastParticipantListCSVName); // XXX
+      }
+  
+      setBreakText(breakText);
+      showBreakText();
+      hideDecks();
+      hideFixation();
+      hideFeedback();
+    } else {
+        showDecks();
+      hideFixation();
+      hideFeedback();
+      hideBreakText();
+      breakOn = false;
+      keysAllowed = true;
+    }
+  
+    if (practiceOn && (practiceTrial == totalPracticeTrials)) {
+      breakOn = true;
+      keysAllowed = false;
+  
+      // re-randomize deck contingencies
+      randomizeDecksOn = true;
+  
+      hideDecks();
+      hideFixation();
+      hideFeedback();
+  
+      currInstructions += 1;
+      $('#instructions1').html(task_instructions[currInstructions]);
+      $('#instructionsHolder').css({display: 'block'});
+      $('#instructions1').css({display: 'block'});
+      $('#nextButton').css({display: 'block'});
+    }
+  
+    // randomize deck contingencies
+    if (randomizeDecksOn) {
+        var tempProbabilityOrder = shuffle(deepCopy(probabilityNames));
+      while (tempProbabilityOrder.indexOf("high") == probabilityOrder.indexOf("high")) {
+          tempProbabilityOrder = shuffle(tempProbabilityOrder);
+      }
+  
+      probabilityOrder = tempProbabilityOrder;
+  
+      probabilityToColor    = _.zipObject(probabilityOrder, deckColorOrder);
+      positionToProbability = _.zipObject(deckPositions, probabilityOrder);
+      probabilityToPosition = _.zipObject(probabilityOrder, deckPositions);
+      positionToColor       = _.zipObject(deckPositions, deckColorOrder);
+      keyToPosition         = _.zipObject(responseKeyList, deckPositions);
+      keyToProbability      = _.zipObject(responseKeyList, probabilityOrder);
+      trialProbabilityArray = trial <= (totalTrials/2) ? firstHalfProbabilities : secondHalfProbabilities;
+      // theseProbabilities    = _.zipObject(probabilityNames, firstHalfProbabilities);
+      theseProbabilities    = _.zipObject(probabilityNames, trialProbabilityArray);
+  
+      // make sure we don't do this twice in a row, and reset the streak
+      randomizeDecksOn = false;
+      streak = 0;
+      strikes = 0;
+    }
+  
+  }
+
   // BELOW COURTESY OF GARY LUPYAN -- COPIED FROM
   //  http://sapir.psych.wisc.edu/wiki/index.php/MTurk
   function getParamFromURL( name ) {

@@ -55,18 +55,16 @@ document.getElementById('nextButton').onclick = function() {
     //document.getElementById('nextButton').innerHTML='begin';
     switch(language){
       case 'english':
+        // alert();
         $('#nextButton').text('BEGIN');
-
         break
 
       case 'french':
         $('#nextButton').text('COMMENCER');
-
         break
 
       case 'german':
         $('#nextButton').text('START');
-
         break
     }
     //$('#nextButton').text(begin);
@@ -74,7 +72,7 @@ document.getElementById('nextButton').onclick = function() {
     // $('#nextButton').toggleClass("", "noCursor");
     $("button.noCursor").click(function(){
       $("body").addClass("hideCursor");
-      }); 
+      });
 
   // Attrition phase end, instructions phase start
   } else if (nextButtonClickCounter == 2) {
@@ -98,6 +96,7 @@ document.getElementById('nextButton').onclick = function() {
 
   // Instructions phase end, practice phase start
   } else if (nextButtonClickCounter == 3) {
+
 		keysAllowed = true;
     practiceOn = true;
     interactiveInstructionsOn = false;
@@ -116,7 +115,7 @@ document.getElementById('nextButton').onclick = function() {
     practiceOn = false;
     interactiveInstructionsOn = false;
     $(".instructions").css({"display": "none"});
-    $('#nextButton').css({display: "none"});
+    $('#nextButton').css({"display": "none"});
     // show fixation after feedback is done
     showFixationOnly();
     // reset display once ITI is done
@@ -165,11 +164,16 @@ $(document).keypress(function(key) {
         keysAllowed = false;
         hideDecks();
         hideFeedback();
-        $("#nextButton").css({"display": "block"});
+        $("#nextButton").css({display: "block"});
+        $(document).ready(function(){
+          $("body").addClass("showCursor");
+          });
       }
-
+      // alert();
     } else if (practiceOn) {
+// alert();
       if (practiceTrial < totalPracticeTrials) {
+        // alert();
         if (!breakOn && responseKeyList.includes(thisKey) && (thisPressInterval > minPressInterval)) { // keysAllowed
           keysAllowed = false;
           practiceTrial += 1;
