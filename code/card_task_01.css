@@ -24,7 +24,7 @@ body {
 .consent-box {
   background:#CEE8FC; /* #FCF9CE */
   border:solid 0px #98BE10;
-  color:#222222; padding:4px;
+  color:#222222; padding:16px;
 }
 
 #consentHeading, #consentParticipantType{
@@ -236,7 +236,7 @@ body {
     pointer-events: none;
   }
 
-  /* hide cursor */
+  /* show cursor */
 .showCursor {
   cursor: default;
   }
