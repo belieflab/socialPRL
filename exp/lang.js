@@ -490,7 +490,7 @@ switch(language){
                     $("body").addClass("showCursor");
                     }); 
 
-                    
+
                 breakText = "Sie haben die Aufgabe abgeschlossen. Ihr Endergebnis ist " + score + ".\n" + '<br>' +
                   "Sie haben das Experiment erfolgreich abgeschlossen und Ihre Daten wurden gespeichert.\n" + '<br>' +
                   "Fahren Sie unter diesem Link mit dem zweiten Teil der Aufgabe fort:\n" + '<br>' +
@@ -523,7 +523,7 @@ switch(language){
               hideFixation();
               hideFeedback();
             } else {
-                showDecks();
+              showDecks();
               hideFixation();
               hideFeedback();
               hideBreakText();

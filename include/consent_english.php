@@ -7,7 +7,7 @@
     <h1 class="loading">Loading...</h1>
   </div>
   <div id="consentHolder" class="consent centeredDiv">
-  <h3 id="consentPreamble" class="consent">In order for us to conduct this test online, we need to include the standard consent form below: <br /> <br /> </h3>
+  <h3 id="consentPreamble" class="consent">In order for us to conduct this experiment online, we need to include the standard consent form below: <br /> <br /> </h3>
 
 <div id="consentForm" class="consent consent-box"> 
     <h2 id="consentHeading" class="consent">

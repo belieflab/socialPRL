@@ -7,7 +7,7 @@
     <h1 class="loading">Chargement...</h1>
   </div>
   <div id="consentHolder" class="consent centeredDiv">
-  <h3 id="consentPreamble" class="consent">Pour que nous puissions effectuer ce test en ligne, nous devons inclure le formulaire de consentement standard ci-dessous: <br /> <br /> </h3>
+  <h3 id="consentPreamble" class="consent">Pour que nous puissions effectuer ce essai en ligne, nous devons inclure le formulaire de consentement standard ci-dessous: <br /> <br /> </h3>
 
 <div id="consentForm" class="consent consent-box"> 
     <h2 id="consentHeading" class="consent">
