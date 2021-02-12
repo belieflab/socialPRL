@@ -157,7 +157,7 @@ function deepCopy(obj) {
       type:'post',
       async: false,
       cache: false,
-      url: 'code/addToParticipantList.py', // this is the path to the PHP script that will handle saving data
+      url: '../code/addToParticipantList.py', // this is the path to the PHP script that will handle saving data
       data: {
         workerId: workerId,
         fileName: fileName,
@@ -175,7 +175,7 @@ function deepCopy(obj) {
       type:'post',
       async: false,
       cache: false,
-      url: 'code/saveData.py', // this is the path to the PHP script that will handle saving data
+      url: '../code/saveData.py', // this is the path to the PHP script that will handle saving data
       data: {
         fileName: subjectFileName,
         excludedFileName: excludedCSVName,
