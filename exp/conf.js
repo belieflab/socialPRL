@@ -64,8 +64,8 @@ const qualtrics = "https://survey.az1.qualtrics.com/SE/?SID=SV_5jt7BivBUleMhWl&Q
 
 
 var refreshCount          = parseInt("<?php echo $_SESSION['refreshCount']; ?>");
-var dataDirectory         = '../data/';
-var stimulusDirectory     = '../stimuli/';
+var dataDirectory         = 'data/';
+var stimulusDirectory     = 'stimuli/';
 var csvPrefix             = "socialPRL_";
 var csvExtension          = '.csv';
 

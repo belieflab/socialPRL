@@ -104,7 +104,7 @@ switch(language){
 
                 $(document).ready(function(){
                     $("body").addClass("showCursor");
-                    }); 
+                    });
               
                 breakText = "You have completed the task. Your final score is " + score + ".\n" + '<br>' +
                   "You have successfully completed the experiment and your data has been saved.\n" + '<br>' +
