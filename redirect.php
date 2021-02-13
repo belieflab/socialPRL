@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>3-PRLT</title>
+	<title>Social PRL</title>
   <script>
   //onbeforeunload in body
   function areYouSure() {

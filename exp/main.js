@@ -57,15 +57,15 @@ document.getElementById('nextButton').onclick = function() {
       case 'english':
         // alert();
         $('#nextButton').text('BEGIN');
-        break
+        break;
 
       case 'french':
         $('#nextButton').text('COMMENCER');
-        break
+        break;
 
       case 'german':
         $('#nextButton').text('START');
-        break
+        break;
     }
     //$('#nextButton').text(begin);
     document.getElementById("pass").innerHTML = ''; // hides validation success text
@@ -96,7 +96,10 @@ document.getElementById('nextButton').onclick = function() {
 
   // Instructions phase end, practice phase start
   } else if (nextButtonClickCounter == 3) {
-
+    // $(document).ready(function(){
+    //   $("body").addClass("hideCursor");
+    //   });
+    // alert();
 		keysAllowed = true;
     practiceOn = true;
     interactiveInstructionsOn = false;
@@ -164,16 +167,30 @@ $(document).keypress(function(key) {
         keysAllowed = false;
         hideDecks();
         hideFeedback();
-        $("#nextButton").css({display: "block"});
+        $("#nextButton").css({"display": "block"});
         $(document).ready(function(){
           $("body").addClass("showCursor");
           });
+        $("#nextButton").click(function(){
+          $("body").removeClass("showCursor");
+          $("body").addClass("hideCursor");
+          });
+      } else if (currInstructions === task_instructions.length) {
+        alert();
+        $(document).ready(function(){
+          $("body").addClass("showCursor");
+          });
+        // $("#nextButton").click(function(){
+        //   $("body").removeClass("showCursor");
+        //   $("body").addClass("hideCursor");
+        //   });
       }
-      // alert();
+      //   });
     } else if (practiceOn) {
 // alert();
+// 
       if (practiceTrial < totalPracticeTrials) {
-        // alert();
+
         if (!breakOn && responseKeyList.includes(thisKey) && (thisPressInterval > minPressInterval)) { // keysAllowed
           keysAllowed = false;
           practiceTrial += 1;
