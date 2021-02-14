@@ -105,6 +105,17 @@ document.getElementById('nextButton').onclick = function() {
     interactiveInstructionsOn = false;
     $(".instructions").css({"display": "none"});
     $("#instructions1").html(endPracticeInstructions);
+      $(document).ready(function(){
+        $("body").addClass("showCursor");
+        });
+      $("#nextButton").click(function(){
+        $("body").removeClass("showCursor");
+        $("body").addClass("hideCursor");
+        });
+      // $("#nextButton").click(function(){
+      //   $("body").removeClass("showCursor");
+      //   $("body").addClass("hideCursor");
+      //   });
     $('#nextButton').css({display: "none"});
     $("#rightDeck").css({display: 'block'});
     // show fixation after feedback is done
@@ -175,16 +186,8 @@ $(document).keypress(function(key) {
           $("body").removeClass("showCursor");
           $("body").addClass("hideCursor");
           });
-      } else if (currInstructions === task_instructions.length) {
-        alert();
-        $(document).ready(function(){
-          $("body").addClass("showCursor");
-          });
-        // $("#nextButton").click(function(){
-        //   $("body").removeClass("showCursor");
-        //   $("body").addClass("hideCursor");
-        //   });
-      }
+      } 
+
       //   });
     } else if (practiceOn) {
 // alert();
