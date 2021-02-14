@@ -247,7 +247,7 @@ function deepCopy(obj) {
               break;
           }
       } else {
-
+        document.getElementById("unload").onbeforeunload='';
         $(document).ready(function(){
             $("body").addClass("showCursor");
             });

@@ -34,7 +34,7 @@ require_once ("db/config.php");
   <script>const language = "<?php echo$language?>";</script>
 </head>
 
-<body onbeforeunload="return areYouSure()">
+<body id='unload' onbeforeunload="return areYouSure()">
     <?php
       if ($turkprime_online == true) {
         switch($language){
