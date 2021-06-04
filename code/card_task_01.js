@@ -65,7 +65,6 @@ var endPracticeInstructions = "You have now completed the practice round. " +
 "Please click 'Next' whenever you are ready to start the main task.";
 
 
-
 var task_instructions = [];
 task_instructions.push(instr1);
 task_instructions.push(instr2);
