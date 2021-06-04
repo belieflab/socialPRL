@@ -19,50 +19,50 @@ var instr1 = "Welcome! Before we begin, please make your window as large as poss
 "<br /><br />" +
 "Please press the zero (0) key to continue.";
 
-// var instr2 = "In this study, you will play a card game, and your goal " +
-// "is to win as many points as you can." +
-// "<br /><br />" +
-// "If your score lands you in the top " + percentile + "% of participants, you will " +
-// "get an extra $" + bonus + " bonus, so please do your best!" +
-// "<br /><br />" +
-// "Please press the zero (0) key to continue.";
-
-var instr3 = "The card game is very simple: on each turn you will choose one of the " +
-"three decks below, so you can draw a card from it. You can choose a deck " +
-"using the ‘1’, ‘2’, or ‘3’ keys on your keyboard to choose the " +
-"left, middle, or right deck respectively." +
-"<br /><br />" +
-"Let's practice choosing decks. Please choose the <b>left</b> deck by pressing the '1' key.";
-
-var instr4 = "Great! Now choose the <b>middle</b> deck by pressing the '2' key.";
-
-var instr5 = "Excellent! Now choose the <b>right</b> deck by pressing the '3' key.";
-
-var instr6 = "Good job! You have successfully practiced selecting decks." +
-"<br /><br />" +
-"After you select a deck, the top card will turn over. This card can either win you " +
-"an additional 100 points ('winning' cards) or take away 50 points ('losing' cards). " +
-"Below you can see what those cards look like." +
-"<br /><br />" +
-"<b>Note that each deck contains both winning and losing cards, but in different amounts. </b>" +
-"Your job is to figure out which deck is the best deck, so that you can get as many points " +
-"as possible." +
+var instr2 = "In this study, you will play a game about working with people, and your goal " +
+"is to win as many points as you can." +
 "<br /><br />" +
 "Please press the zero (0) key to continue.";
 
-var instr7 = "However, there is one final catch: <b>there may be times when the best deck will change.</b>" +
+var instr3 = "Imagine you are a student at a university. Working with classmates " +
+"can help you learn and complete group projects. However, sometimes classmates can be " +
+"unreliable. They can show up late, fail to complete their work, or be distracted for " +
+"personal reasons. Some classmates may even deliberately sabotage your work." +
 "<br /><br />" +
-"If you think the best deck has changed from what it was before, then try to find out the new best deck." +
+"Three classmates are shown below. On each turn, you will select one partner to work with " +
+"on a school project. You may use the '1', '2', or '3' keys on your keyboard to choose the " +
+"left, middle, or right classmate, respectively. " +
 "<br /><br />" +
-"The following is a practice round of just 3 turns. The points you get here won’t change your final score, " +
-"and the best deck will change between the practice round and when the real game starts." +
+"Let's practice choosing partners. Please select the <b>left</b> partner by pressing the '1' key. ";
+
+var instr4 = "Great! Now choose the <b>middle</b> partner by pressing the '2' key.";
+
+var instr5 = "Excellent! Now choose the <b>right</b> partner by pressing the '3' key.";
+
+var instr6 = "Good job! You have successfully practiced selecting partners." +
+"<br /><br />" +
+"After you select a partner, you will see if your project succeeds (+100 points) or " +
+"fails (-50 points). " +
+"<br /><br />"+
+"<b>Note that each partner is different.</b> Your job is to find the best partner, and to get as " +
+"many points as possible. However, no partner is perfect. Anyone can have a bad day. " +
+"<br /><br />"+
+"Please press the zero (0) key to continue.";
+
+var instr7 = "There is one additional catch: <b>sometimes, the partners may change.</b> The partner that previously " +
+"performed the best may start to struggle or sabotage you while the other partners may improve." +
+"<br /><br />" +
+"If you think the best partner has changed, you should try to find the new best partner."+
+"<br /><br />" +
+"The following is a practice round of just 3 turns. The points you get here won't change your final score, " +
+"and the best partner will change between the practice round and when the real game starts." +
 "<br /><br />" +
 "Please click the 'Begin' button to start the practice round.";
 
 var endPracticeInstructions = "You have now completed the practice round. " +
 "The main task will take approximately another 10 minutes, with longer individual rounds than the practice. " +
 "<br /><br />" +
-"Please click 'Begin' whenever you are ready to start the main task.";
+"Please click 'Next' whenever you are ready to start the main task.";
 
 
 var task_instructions = [];
