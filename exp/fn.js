@@ -253,13 +253,20 @@ function deepCopy(obj) {
             });
         switch(language) {
           case "english":
-            breakText = "You have completed the task. Your final score is " + score + ".\n" + '<br>' +
+            if (turkprime_online == true){
+              breakText = "You have completed the task. Your final score is " + score + ".\n" + '<br>' +
               "You have successfully completed the experiment and your data has been saved.\n" + '<br>' +
               "Please move on to the second part of the task at this link:\n" + '<br>' +
               "<a href="+qualtrics+">Qualtrics</a>\n" + '<br>' +
                   // "Please wait for the experimenter to continue.\n"+ '<br>' +
               "You may now close the expriment window at anytime.\n";
               break;
+            } else if (turkprime_online == false){
+              breakText = "You have completed the task. Your final score is " + score + ".\n" + '<br>' +
+              "You have successfully completed the experiment and your data has been saved.\n" + '<br>' +
+              "You may now close the expriment window at anytime.\n";
+              break;
+            }
             case "french":
               breakText = "Vous avez terminé la tâche. Votre score final est de  " + score + ".\n" + '<br>' +
                 "Vous avez terminé le test avec succès et vos données ont été enregistrées.\n" + '<br>' +

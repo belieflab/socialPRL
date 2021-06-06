@@ -17,9 +17,31 @@ switch(language){
     
         //const consent = 'CONSENT';
         // Attrition instructions -- English
+        if (turkprime_online == true){
+            
+            var openEnded = "This is an anonymous survey consisting of multiple questions. A few questions are open-ended questions where you need to type a few sentences of a short paragraph or two. Many MTurk workers do not like answering open-ended questions and tend to quit a survey once they see such questions. <b>If a sizable number of people quit a survey halfway, the data quality of that survey would be compromised. However, our research depends on good quality data.</b> Thus, please make sure you do not mind open-ended questions before taking this survey.";
 
-        var openEnded = "This is an anonymous survey consisting of multiple questions. A few questions are open-ended questions where you need to type a few sentences of a short paragraph or two. Many MTurk workers do not like answering open-ended questions and tend to quit a survey once they see such questions. <b>If a sizable number of people quit a survey halfway, the data quality of that survey would be compromised. However, our research depends on good quality data.</b> Thus, please make sure you do not mind open-ended questions before taking this survey.";
+            var instr2 = "In this study, you will play a game about working with people, and your goal " +
+            "is to win as many points as you can." +
+            "<br /><br />" +
+            "If your score lands you in the top " + percentile + "% of participants, you will " +
+            "get an extra $" + bonus + " bonus, so please do your best!" +
+            "<br /><br />" +
+            "Please also keep in mind that this survey consists of two parts: the game and " +
+            "a survey. After completing the survey, please record the confirmation code you receive. " +
+            "<b>You must submit the code in order to receive compensation.</b>" +
+            "<br /><br />" +
+            "Please press the zero (0) key to continue.";
+        } else if (turkprime_online == false){
 
+            var openEnded = "";
+
+            var instr2 = "In this study, you will play a game about working with people, and your goal " +
+            "is to win as many points as you can." +
+            "<br /><br />" +
+            "Please press the zero (0) key to continue.";
+        }
+ 
         var attrition_instructions =  "Please type the following sentence into the box below exactly as written " +
         "to proceed: " + "<br>" +
         "<i>I will answer open-ended questions.</i>" +
@@ -30,19 +52,6 @@ switch(language){
         "may be locked out from completing the task." +
         "<br /><br />" +
         "Please press the zero (0) key to continue.";
-
-        var instr2 = "In this study, you will play a game about working with people, and your goal " +
-        "is to win as many points as you can." +
-        "<br /><br />" +
-        "If your score lands you in the top " + percentile + "% of participants, you will " +
-        "get an extra $" + bonus + " bonus, so please do your best!" +
-        "<br /><br />" +
-        "Please also keep in mind that this survey consists of two parts: the game and " +
-        "a survey. After completing the survey, please record the confirmation code you receive. " +
-        "<b>You must submit the code in order to receive compensation.</b>" +
-        "<br /><br />" +
-        "Please press the zero (0) key to continue.";
-
 
         var instr3 = "Imagine you are a student at a university. Working with classmates " +
         "can help you learn and complete group projects. However, sometimes classmates can be " +
