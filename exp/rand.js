@@ -1,1 +1,1 @@
-reward = 'money';
+let reward = 'nothing';
