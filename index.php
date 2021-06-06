@@ -81,20 +81,26 @@ require_once ("db/config.php");
 
 <div class="filler"> </div>
 <div class="deckContainer task">
-    <div class="imgContainer" id="leftDeck">
-        <img id="leftDeckImage" src="stimuli/avatar_red.png" height="270px" width="200px"/>
-        <div class="feedback" id="leftFeedback">100</div>
-    </div>
-    
-    <div class="imgContainer" id="middleDeck">
-        <img id="middleDeckImage" src="stimuli/avatar_black.png" height="270px" width="200px"/>
-        <div class="feedback" id="middleFeedback">-50</div>
-    </div>
-    
-    <div class="imgContainer" id="rightDeck">
-         <img id="rightDeckImage" src="stimuli/avatar_blue.png" height="270px" width="200px"/>
-         <div class="feedback" id="rightFeedback">-50</div>
-    </div>
+<?php 
+switch($avatarSet) {
+  case 0: 
+    echo'<div class="imgContainer" id="leftDeck">';
+    echo'<img id="leftDeckImage" src="stimuli/avatars/1/avatar_green.png" height="270px" width="200px"/>';
+    echo'<div class="feedback" id="leftFeedback">100</div>';
+echo'</div>';
+
+echo'<div class="imgContainer" id="middleDeck">';
+    echo'<img id="middleDeckImage" src="stimuli/avatars/1/avatar_orange.png" height="270px" width="200px"/>';
+    echo'<div class="feedback" id="middleFeedback">-50</div>';
+echo'</div>';
+
+echo'<div class="imgContainer" id="rightDeck">';
+     echo'<img id="rightDeckImage" src="stimuli/avatars/1/avatar_purple.png" height="270px" width="200px"/>';
+     echo'<div class="feedback" id="rightFeedback">-50</div>';
+echo'</div>';
+
+}
+?>
     
 </div>
 <div class="fixation task"> + </div>
