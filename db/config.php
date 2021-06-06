@@ -30,7 +30,7 @@ if (file_exists($_SERVER["DOCUMENT_ROOT"] . '/config.php')) {
 
   if(isset($workerId)){
     // if running locally or on server...
-    echo '<script type="text/javascript">alert("workerId")</script>';
+    //echo '<script type="text/javascript">alert("workerId")</script>';
     // echo '<script type="text/javascript">let db_connection = false</script>';
     // echo '<script type="text/javascript">let turkprime_online = true</script>';
     $db_connection_status = false;
@@ -56,7 +56,7 @@ if (file_exists($_SERVER["DOCUMENT_ROOT"] . '/config.php')) {
  
   } else {
     // if running locally or on server...
-    echo '<script type="text/javascript">alert("hi")</script>';
+    //echo '<script type="text/javascript">alert("hi")</script>';
     // echo$db_connection_status;
     $db_connection_status = false;
     $turkprime_online = false;
@@ -80,14 +80,14 @@ if (file_exists($_SERVER["DOCUMENT_ROOT"] . '/config.php')) {
   $workerId = $_GET["workerId"];
   if(isset($workerId)){
     // if running locally with workerId...
-    echo '<script type="text/javascript">alert("workerIdisset")</script>';
+    //echo '<script type="text/javascript">alert("workerIdisset")</script>';
     echo '<script type="text/javascript">let db_connection = false</script>';
     echo '<script type="text/javascript">let turkprime_online = true</script>';
     $db_connection_status = false;
     $turkprime_online = true;
   } else {
       // if running locally...
-      echo '<script type="text/javascript">alert("workerIdisnotset")</script>';
+      //echo '<script type="text/javascript">alert("workerIdisnotset")</script>';
       $db_connection_status = false;
       $turkprime_online = false;
       echo '<script type="text/javascript">let db_connection = false</script>';
