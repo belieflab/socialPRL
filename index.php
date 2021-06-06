@@ -105,7 +105,7 @@ require_once ("db/config.php");
 
 <!-- </body> -->
 <script src="db/validate.js"></script>
-    <script src="js/jquery-3.5.1.min.js"></script>
+<script src="js/jquery-3.5.1.min.js"></script>
 <script type="text/javascript" src="libraries/Timeout.js"></script>
 <script type="text/javascript" src="libraries/lodash.js"></script>
 <script type="text/javascript" src="libraries/seedrandom.js"></script>
