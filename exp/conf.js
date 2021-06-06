@@ -133,12 +133,12 @@ for (var i = trialsPerBlock; i <= totalTrials; i += trialsPerBlock) {
 
 // Choose deck placement
 // Select 0-6 to choose avatar set stimulus
-const avatarSet = 0; // change avatar set here
+const avatarSet = 6; // change avatar set here
 const deckImagePrefix    = "stimuli/avatars/" + avatarSet + "/avatar_";
 const avatarColor = [
   ['black','blue','red'],
   ['green','orange','purple'],
-  ['darkred','darkteal','lime'],
+  ['darkred','darkteal','orange'],
   ['brown','lavender','lightblue'],
   ['lightyellow','mudbrown','turquoise'],
   ['darkblue','lightturquoise','rose'],

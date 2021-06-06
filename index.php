@@ -85,19 +85,124 @@ require_once ("db/config.php");
 switch($avatarSet) {
   case 0: 
     echo'<div class="imgContainer" id="leftDeck">';
-    echo'<img id="leftDeckImage" src="stimuli/avatars/1/avatar_green.png" height="270px" width="200px"/>';
+    echo'<img id="leftDeckImage" src="stimuli/avatars/0/avatar_black.png" height="270px" width="200px"/>';
     echo'<div class="feedback" id="leftFeedback">100</div>';
 echo'</div>';
 
 echo'<div class="imgContainer" id="middleDeck">';
-    echo'<img id="middleDeckImage" src="stimuli/avatars/1/avatar_orange.png" height="270px" width="200px"/>';
+    echo'<img id="middleDeckImage" src="stimuli/avatars/0/avatar_blue.png" height="270px" width="200px"/>';
     echo'<div class="feedback" id="middleFeedback">-50</div>';
 echo'</div>';
 
 echo'<div class="imgContainer" id="rightDeck">';
-     echo'<img id="rightDeckImage" src="stimuli/avatars/1/avatar_purple.png" height="270px" width="200px"/>';
+     echo'<img id="rightDeckImage" src="stimuli/avatars/0/avatar_red.png" height="270px" width="200px"/>';
      echo'<div class="feedback" id="rightFeedback">-50</div>';
 echo'</div>';
+break;
+
+case 1: 
+  echo'<div class="imgContainer" id="leftDeck">';
+  echo'<img id="leftDeckImage" src="stimuli/avatars/1/avatar_green.png" height="270px" width="200px"/>';
+  echo'<div class="feedback" id="leftFeedback">100</div>';
+echo'</div>';
+
+echo'<div class="imgContainer" id="middleDeck">';
+  echo'<img id="middleDeckImage" src="stimuli/avatars/1/avatar_orange.png" height="270px" width="200px"/>';
+  echo'<div class="feedback" id="middleFeedback">-50</div>';
+echo'</div>';
+
+echo'<div class="imgContainer" id="rightDeck">';
+   echo'<img id="rightDeckImage" src="stimuli/avatars/1/avatar_purple.png" height="270px" width="200px"/>';
+   echo'<div class="feedback" id="rightFeedback">-50</div>';
+echo'</div>';
+break;
+
+case 2: 
+  echo'<div class="imgContainer" id="leftDeck">';
+  echo'<img id="leftDeckImage" src="stimuli/avatars/2/avatar_darkred.png" height="270px" width="200px"/>';
+  echo'<div class="feedback" id="leftFeedback">100</div>';
+echo'</div>';
+
+echo'<div class="imgContainer" id="middleDeck">';
+  echo'<img id="middleDeckImage" src="stimuli/avatars/2/avatar_darkteal.png" height="270px" width="200px"/>';
+  echo'<div class="feedback" id="middleFeedback">-50</div>';
+echo'</div>';
+
+echo'<div class="imgContainer" id="rightDeck">';
+   echo'<img id="rightDeckImage" src="stimuli/avatars/2/avatar_orange.png" height="270px" width="200px"/>';
+   echo'<div class="feedback" id="rightFeedback">-50</div>';
+echo'</div>';
+break;
+
+case 3: 
+  echo'<div class="imgContainer" id="leftDeck">';
+  echo'<img id="leftDeckImage" src="stimuli/avatars/3/avatar_brown.png" height="270px" width="200px"/>';
+  echo'<div class="feedback" id="leftFeedback">100</div>';
+echo'</div>';
+
+echo'<div class="imgContainer" id="middleDeck">';
+  echo'<img id="middleDeckImage" src="stimuli/avatars/3/avatar_lavender.png" height="270px" width="200px"/>';
+  echo'<div class="feedback" id="middleFeedback">-50</div>';
+echo'</div>';
+
+echo'<div class="imgContainer" id="rightDeck">';
+   echo'<img id="rightDeckImage" src="stimuli/avatars/3/avatar_lightblue.png" height="270px" width="200px"/>';
+   echo'<div class="feedback" id="rightFeedback">-50</div>';
+echo'</div>';
+break;
+
+case 4: 
+  echo'<div class="imgContainer" id="leftDeck">';
+  echo'<img id="leftDeckImage" src="stimuli/avatars/4/avatar_lightyellow.png" height="270px" width="200px"/>';
+  echo'<div class="feedback" id="leftFeedback">100</div>';
+echo'</div>';
+
+echo'<div class="imgContainer" id="middleDeck">';
+  echo'<img id="middleDeckImage" src="stimuli/avatars/4/avatar_mudbrown.png" height="270px" width="200px"/>';
+  echo'<div class="feedback" id="middleFeedback">-50</div>';
+echo'</div>';
+
+echo'<div class="imgContainer" id="rightDeck">';
+   echo'<img id="rightDeckImage" src="stimuli/avatars/4/avatar_turquoise.png" height="270px" width="200px"/>';
+   echo'<div class="feedback" id="rightFeedback">-50</div>';
+echo'</div>';
+break;
+
+case 5: 
+  echo'<div class="imgContainer" id="leftDeck">';
+  echo'<img id="leftDeckImage" src="stimuli/avatars/5/avatar_darkblue.png" height="270px" width="200px"/>';
+  echo'<div class="feedback" id="leftFeedback">100</div>';
+echo'</div>';
+
+echo'<div class="imgContainer" id="middleDeck">';
+  echo'<img id="middleDeckImage" src="stimuli/avatars/5/avatar_lightturquoise.png" height="270px" width="200px"/>';
+  echo'<div class="feedback" id="middleFeedback">-50</div>';
+echo'</div>';
+
+echo'<div class="imgContainer" id="rightDeck">';
+   echo'<img id="rightDeckImage" src="stimuli/avatars/5/avatar_rose.png" height="270px" width="200px"/>';
+   echo'<div class="feedback" id="rightFeedback">-50</div>';
+echo'</div>';
+break;
+
+case 6: 
+  echo'<div class="imgContainer" id="leftDeck">';
+  echo'<img id="leftDeckImage" src="stimuli/avatars/6/avatar_lavender.png" height="270px" width="200px"/>';
+  echo'<div class="feedback" id="leftFeedback">100</div>';
+echo'</div>';
+
+echo'<div class="imgContainer" id="middleDeck">';
+  echo'<img id="middleDeckImage" src="stimuli/avatars/6/avatar_red.png" height="270px" width="200px"/>';
+  echo'<div class="feedback" id="middleFeedback">-50</div>';
+echo'</div>';
+
+echo'<div class="imgContainer" id="rightDeck">';
+   echo'<img id="rightDeckImage" src="stimuli/avatars/6/avatar_turquoise.png" height="270px" width="200px"/>';
+   echo'<div class="feedback" id="rightFeedback">-50</div>';
+echo'</div>';
+break;
+
+
 
 }
 ?>
