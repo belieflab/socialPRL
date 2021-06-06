@@ -39,50 +39,71 @@ document.getElementById('nextButton').onclick = function() {
   if (nextButtonClickCounter == 1) {
   	// Hide consent stuff
     $(".consent").css({"display": "none"});
+  if (turkprime_online == true){
+        // Show attrition stuff
+        $(".attrition").css({"display": "block"});
 
-    // Show attrition stuff
-    $(".attrition").css({"display": "block"});
+        // function translate(){
+        //    var begin; 
+        //   switch(language){
+        //     case 'english': 
+        //      begin='BEGIN';
+        //      break
+       
+        //     case 'french':
+        //      begin='XXX';
+        //      break
+       
+        //     case 'german':
+        //      begin='XXX';
+        //      break
+        //    }
+        // }
+        // translate();
+        // reword next button
+        //document.getElementById('nextButton').innerHTML='begin';
+        switch(language){
+          case 'english':
+            // alert();
+            $('#nextButton').text('BEGIN');
+            break;
+    
+          case 'french':
+            $('#nextButton').text('COMMENCER');
+            break;
+    
+          case 'german':
+            $('#nextButton').text('START');
+            break;
+        }
+        //$('#nextButton').text(begin);
+        document.getElementById("pass").innerHTML = ''; // hides validation success text
+        // $('#nextButton').toggleClass("", "noCursor");
+        $("button.noCursor").click(function(){
+          $("body").addClass("hideCursor");
+          });
 
-    // function translate(){
-    //    var begin; 
-    //   switch(language){
-    //     case 'english': 
-    //      begin='BEGIN';
-    //      break
-   
-    //     case 'french':
-    //      begin='XXX';
-    //      break
-   
-    //     case 'german':
-    //      begin='XXX';
-    //      break
-    //    }
-    // }
-    // translate();
-    // reword next button
-    //document.getElementById('nextButton').innerHTML='begin';
+    // } else if (turkprime_online == false){
+    //   // let leapfrog = true;
+    }
+
     switch(language){
       case 'english':
         // alert();
+        document.getElementById("pass").innerHTML = ''; // hides validation success text
         $('#nextButton').text('BEGIN');
         break;
 
       case 'french':
+        document.getElementById("pass").innerHTML = ''; // hides validation success text
         $('#nextButton').text('COMMENCER');
         break;
 
       case 'german':
+        document.getElementById("pass").innerHTML = ''; // hides validation success text
         $('#nextButton').text('START');
         break;
     }
-    //$('#nextButton').text(begin);
-    document.getElementById("pass").innerHTML = ''; // hides validation success text
-    // $('#nextButton').toggleClass("", "noCursor");
-    $("button.noCursor").click(function(){
-      $("body").addClass("hideCursor");
-      });
-
   // Attrition phase end, instructions phase start
   } else if (nextButtonClickCounter == 2) {
 		// validate attrition ans

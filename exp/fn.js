@@ -52,6 +52,8 @@ function deepCopy(obj) {
 //    var almostModelResponse = "I am ready to begin this task";
     if ( (response == modelResponse) || (response==almostModelResponse)) {
       valid = true;
+    } else if (turkprime_online == false) {
+      valid = true;
     } else {
       valid = false;
       return alertAndFocus(field, errorMessage);
