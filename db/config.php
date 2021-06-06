@@ -1,4 +1,6 @@
 <?php
+// set php variable and js config variable 
+$avatarSet = 1;
 // check for configuration file on server; if does not exist, set db_connection_status to false.
 if (file_exists($_SERVER["DOCUMENT_ROOT"] . '/config.php')) {
   include_once ($_SERVER["DOCUMENT_ROOT"] . '/config.php');
