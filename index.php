@@ -82,17 +82,20 @@ require_once ("db/config.php");
 <div class="filler"> </div>
 <div class="deckContainer task">
     <div class="imgContainer" id="leftDeck">
-        <img id="leftDeckImage" src="stimuli/avatar_red.png" height="270px" width="200px"/>
+        <img id="leftDeckImage" src="stimuli/avatars/1/avatar_green.png" height="270px" width="200px"/>
+        <!-- <script>document.createElement('img').src =  deckImagePrefix + deckColorOrder[0] + deckImageExtension;</script> -->
         <div class="feedback" id="leftFeedback">100</div>
     </div>
     
     <div class="imgContainer" id="middleDeck">
-        <img id="middleDeckImage" src="stimuli/avatar_black.png" height="270px" width="200px"/>
+        <img id="middleDeckImage" src="stimuli/avatars/1/avatar_orange.png" height="270px" width="200px"/>
+        <!-- <script>document.createElement('img').src =  deckImagePrefix + deckColorOrder[1] + deckImageExtension;</script> -->
         <div class="feedback" id="middleFeedback">-50</div>
     </div>
     
     <div class="imgContainer" id="rightDeck">
-         <img id="rightDeckImage" src="stimuli/avatar_blue.png" height="270px" width="200px"/>
+         <img id="rightDeckImage" src="stimuli/avatars/1/avatar_purple.png" height="270px" width="200px"/>
+         <!-- <script>document.createElement('img').src =  deckImagePrefix + deckColorOrder[2] + deckImageExtension;</script> -->
          <div class="feedback" id="rightFeedback">-50</div>
     </div>
     
@@ -105,7 +108,7 @@ require_once ("db/config.php");
 
 <!-- </body> -->
 <script src="db/validate.js"></script>
-    <script src="js/jquery-3.5.1.min.js"></script>
+<script src="js/jquery-3.5.1.min.js"></script>
 <script type="text/javascript" src="libraries/Timeout.js"></script>
 <script type="text/javascript" src="libraries/lodash.js"></script>
 <script type="text/javascript" src="libraries/seedrandom.js"></script>

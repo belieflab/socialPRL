@@ -3,6 +3,7 @@ var subjectFileName       = dataDirectory + csvPrefix + workerId + csvExtension;
 var excludedCSVName       = dataDirectory + csvPrefix + workerId + "_excluded.csv";
 var attritionListFileName = dataDirectory + csvPrefix + "attrition_list.csv";
 
+
 //-------------------------------------------
 // INSTRUCTIONS
 //-------------------------------------------

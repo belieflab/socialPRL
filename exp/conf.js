@@ -132,12 +132,23 @@ for (var i = trialsPerBlock; i <= totalTrials; i += trialsPerBlock) {
 }
 
 // Choose deck placement
-var deckImagePrefix    = "../stimuli/avatars/avatar_";
+// Select 0-6 to choose avatar set stimulus
+const avatarSet = 1; // change avatar set here
+const deckImagePrefix    = "../stimuli/avatars/" + avatarSet + "/avatar_";
+const avatarColor = [
+  ['black','blue','red'],
+  ['green','orange','purple'],
+  ['darkred','darkteal','lime'],
+  ['brown','lavender','lightblue'],
+  ['lightyellow','mudbrown','turquoise'],
+  ['darkblue','lightturquoise','rose'],
+  ['lavender','red','turquoise']
+];  
 var deckImageExtension = ".png";
 var probabilityNames   = ['high', 'medium', 'low'];
 var probabilityOrder   = shuffle(deepCopy(probabilityNames));
 var deckPositions      = ['left', 'middle', 'right'];
-var deckColorOrder     = shuffle(['purple', 'orange', 'green']);
+var deckColorOrder     = shuffle(avatarColor[[avatarSet]]);
 
 var probabilityToColor    = _.zipObject(probabilityOrder, deckColorOrder);
 var positionToProbability = _.zipObject(deckPositions, probabilityOrder);
