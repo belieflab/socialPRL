@@ -246,36 +246,30 @@ break;
       let feedbackLink;
       let visit;
       let week;
-      if (workerId != ""){
-          GUID = "";
-          subjectID = "";
-          sexAtBirth = "";
-          siteNumber = "";
-          ageAtAssessment = "";
-          feedbackLink = "";
-          visit = "";
-          week = "";
-      } else{
-        if (db_connection == false){
-          GUID = "";
-          subjectID = "";
-          sexAtBirth = "";
-          siteNumber = "";
-          ageAtAssessment = "";
-          feedbackLink = "";
-          visit = "";
-          week = "";
-        } else if (db_connection == true){
-          GUID = "<?php echo $subjectKey?>";
-          subjectID = "<?php echo $consortId?>";
-          sexAtBirth = "<?php echo $sexAtBirth?>";
-          siteNumber = "<?php echo $institutionAlias?>";
-          ageAtAssessment = "<?php echo $ageInMonths?>";
-          feedbackLink = "https://belieflab.yale.edu/omnibus/eCRFs/feedback/tasks/prl.php?candidateId=<?php echo $candidateId?>&studyId=<?php echo $studyId?>";
-          visit = "<?php echo $visit?>";
-          week = "<?php echo $week?>";
-        }
+
+      if (turkprime_online === true) {
+    
+      } else if (db_connection === false) {
+        GUID = "";
+        subjectID = "";
+        sexAtBirth = "";
+        siteNumber = "";
+        ageAtAssessment = "";
+        feedbackLink = "";
+        visit = "";
+        week = "";
+      } else if (db_connection === true) {
+        GUID = "<?php echo $subjectKey?>";
+        subjectID = "<?php echo $consortId?>";
+        sexAtBirth = "<?php echo $sexAtBirth?>";
+        siteNumber = "<?php echo $institutionAlias?>";
+        ageAtAssessment = "<?php echo $ageInMonths?>";
+        feedbackLink = "https://belieflab.yale.edu/omnibus/eCRFs/feedback/tasks/kamin.php?candidateId=<?php echo $candidateId?>&studyId=<?php echo $studyId?>";
+        visit = "<?php echo $visit?>";
+        week = "<?php echo $week?>";
       }
+
+      
 
     </script>
 
