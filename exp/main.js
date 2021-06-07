@@ -92,16 +92,19 @@ document.getElementById('nextButton').onclick = function() {
         // alert();
         document.getElementById("pass").innerHTML = ''; // hides validation success text
         $('#nextButton').text('BEGIN');
+        nextButtonClickCounter = 3;
         break;
 
       case 'french':
         document.getElementById("pass").innerHTML = ''; // hides validation success text
         $('#nextButton').text('COMMENCER');
+        nextButtonClickCounter = 3;
         break;
 
       case 'german':
         document.getElementById("pass").innerHTML = ''; // hides validation success text
         $('#nextButton').text('START');
+        nextButtonClickCounter = 3;
         break;
     }
   // Attrition phase end, instructions phase start
