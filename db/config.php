@@ -25,6 +25,14 @@ if (file_exists($_SERVER["DOCUMENT_ROOT"] . '/config.php')) {
   include_once ($_SERVER["DOCUMENT_ROOT"] . '/config.php');
   // echo$_SERVER["DOCUMENT_ROOT"];
   $studyId = $_GET["studyId"];
+  $query = "SELECT study_alias from study where study_HIC = '$studyId'";
+  $prepare = $db_connection->prepare($query);
+  $prepare->execute();
+  $result = $prepare->get_result();
+  $row = $result->fetch_assoc();
+  $studyAlias = $row["study_alias"];
+  $prepare->close();
+
   $candidateId = $_GET["candidateId"];
   $workerId = $_GET["workerId"];
 
