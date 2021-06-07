@@ -30,7 +30,7 @@ if (file_exists($_SERVER["DOCUMENT_ROOT"] . '/config.php')) {
 
   if(isset($workerId)){
     // if running locally or on server...
-    //echo '<script type="text/javascript">alert("workerId")</script>';
+    // echo '<script type="text/javascript">alert("workerId")</script>';
     // echo '<script type="text/javascript">let db_connection = false</script>';
     // echo '<script type="text/javascript">let turkprime_online = true</script>';
     $db_connection_status = false;
@@ -38,6 +38,7 @@ if (file_exists($_SERVER["DOCUMENT_ROOT"] . '/config.php')) {
 
   } else if (isset($candidateId)) {
     // if connected to omnibus...
+        // echo '<script type="text/javascript">alert("workerId")</script>';
     $query = "SELECT GUID from phi where sub_id = $candidateId";
     $prepare = $db_connection->prepare($query);
     $prepare->execute();
@@ -53,6 +54,9 @@ if (file_exists($_SERVER["DOCUMENT_ROOT"] . '/config.php')) {
     $ageInMonths = $_GET["interview_age"];
     $visit = $_GET["visit"];
     $week = $_GET["week"];
+
+    echo '<script type="text/javascript">let db_connection = true</script>';
+    echo '<script type="text/javascript">let turkprime_online = false</script>';
  
   } else {
     // if running locally or on server...
