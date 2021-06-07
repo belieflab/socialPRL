@@ -260,6 +260,7 @@ break;
         week = "";
       } else if (db_connection === true) {
         GUID = "<?php echo $subjectKey?>";
+        workerId = "<?php echo $consortId?>";
         subjectID = "<?php echo $consortId?>";
         sexAtBirth = "<?php echo $sexAtBirth?>";
         siteNumber = "<?php echo $institutionAlias?>";
