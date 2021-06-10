@@ -25,8 +25,8 @@ const repeatedAssessmentNumber = '';
 //const repeatedAssessmentNumber = 1;
 
 // First choose version of PRL
-//const version = 'deck';
-const version = 'avatar';
+const version = 'deck';
+//const version = 'avatar';
 
 switch (version) { 
   case 'deck':
@@ -79,6 +79,7 @@ var keyMap = {
 
 let workerId = getParamFromURL( 'workerId' );
 
+
 if (!isEmpty(workerId)) {
   Math.seedrandom(workerId);
 } else {
@@ -97,6 +98,14 @@ if (!isEmpty(workerId)) {
 }
 const qualtrics = "https://survey.az1.qualtrics.com/SE/?SID=SV_5jt7BivBUleMhWl&Q_JFE=0&workerId=" + workerId;
 
+let GUID;
+let subjectID;
+let sexAtBirth;
+let siteNumber;
+let ageAtAssessment;
+let feedbackLink;
+let visit;
+let week;
 
 
 

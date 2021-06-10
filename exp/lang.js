@@ -127,7 +127,7 @@ switch(language){
                 "The following is a practice round of just 3 turns. The points you get here won’t change your final score, " +
                 "and the best partner will change between the practice round and when the real game starts." +
                 "<br /><br />" +
-                "Please click the 'Next' button to start the practice round.";
+                "Please click the 'Begin' button to start the practice round.";
                 break;
 
             }
@@ -146,7 +146,7 @@ switch(language){
         var endPracticeInstructions = "You have now completed the practice round. " +
         "The main task will take approximately another 10 minutes, with longer individual rounds than the practice. " +
         "<br /><br />" +
-        "Please click 'Next' whenever you are ready to start the main task.";
+        "Please click 'Begin' whenever you are ready to start the main task.";
 
         break;
 

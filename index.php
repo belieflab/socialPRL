@@ -129,14 +129,14 @@ require_once ("db/config.php");
 </script>
 <script type="text/javascript">
       // declare NDA required variables
-      let GUID;
-      let subjectID;
-      let sexAtBirth;
-      let siteNumber;
-      let ageAtAssessment;
-      let feedbackLink;
-      let visit;
-      let week;
+      // let GUID;
+      // let subjectID;
+      // let sexAtBirth;
+      // let siteNumber;
+      // let ageAtAssessment;
+      // let feedbackLink;
+      // let visit;
+      // let week;
       if (workerId != ""){
           GUID = "";
           subjectID = "";
