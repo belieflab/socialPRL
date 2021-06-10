@@ -168,7 +168,29 @@ require_once ("db/config.php");
         }
       }
 
-    </script>
+      if (turkprime_online === true) {
+    
+      } else if (db_connection === false) {
+        GUID = "";
+        subjectID = "";
+        sexAtBirth = "";
+        siteNumber = "";
+        ageAtAssessment = "";
+        feedbackLink = "";
+        visit = "";
+        week = "";
+      } else if (db_connection === true) {
+        GUID = "<?php echo $subjectKey?>";
+        workerId = "<?php echo $consortId?>"; // this is necessary so that the data save with the correct id
+        subjectID = "<?php echo $consortId?>";
+        sexAtBirth = "<?php echo $sexAtBirth?>";
+        siteNumber = "<?php echo $institutionAlias?>";
+        ageAtAssessment = "<?php echo $ageInMonths?>";
+        feedbackLink = "https://belieflab.yale.edu/omnibus/eCRFs/feedback/tasks/kamin.php?candidateId=<?php echo $candidateId?>&studyId=<?php echo $studyId?>";
+        visit = "<?php echo $visit?>";
+        week = "<?php echo $week?>";
+      }
+</script>
 
 
 </body>
