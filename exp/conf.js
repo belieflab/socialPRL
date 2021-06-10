@@ -13,6 +13,17 @@
 // TO DO (survey):
 //	- CRT with wording modified (check for citation), but question about if they've seen these Qs before
 
+// repeated assessment
+const repeatedAssessment = '';
+// repeatedAssessment; v = vist, w = week (use abbreviations 'v' or 'w')
+// repeatedAssessment must be _ followed by week or visit (e.g., _w)
+//const repeatedAssessment = '_v';
+//const repeatedAssessment = '_w';
+
+// repeated assessment number
+const repeatedAssessmentNumber = '';
+//const repeatedAssessmentNumber = 1;
+
 // First choose version of PRL
 //const version = 'deck';
 const version = 'avatar';
@@ -30,6 +41,7 @@ switch (version) {
     ['black','blue','red'] // stimulus set = 4
   ];  
   var deckImageExtension = ".jpg";
+  var csvPrefix             = "prl_";
   break;
 
   case 'avatar':
@@ -46,6 +58,7 @@ switch (version) {
     ['lavender','red','turquoise'] // stimulus set = 6
   ];  
   var deckImageExtension = ".png";
+  var csvPrefix             = "social_prl_";
   break;
 }
 
@@ -91,7 +104,6 @@ const qualtrics = "https://survey.az1.qualtrics.com/SE/?SID=SV_5jt7BivBUleMhWl&Q
 var refreshCount          = parseInt("<?php echo $_SESSION['refreshCount']; ?>");
 var dataDirectory         = '../data/';
 var stimulusDirectory     = '../stimuli/';
-var csvPrefix             = "socialPRL_";
 var csvExtension          = '.csv';
 
 

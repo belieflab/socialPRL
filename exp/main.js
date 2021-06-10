@@ -1,6 +1,6 @@
 // instantiate data saving
-var subjectFileName       = dataDirectory + csvPrefix + workerId + csvExtension;
-var excludedCSVName       = dataDirectory + csvPrefix + workerId + "_excluded.csv";
+var subjectFileName       = dataDirectory + csvPrefix + workerId + repeatedAssessment + repeatedAssessmentNumber + csvExtension;
+var excludedCSVName       = dataDirectory + csvPrefix + workerId + repeatedAssessment + repeatedAssessmentNumber + "_excluded.csv";
 var attritionListFileName = dataDirectory + csvPrefix + "attrition_list.csv";
 
 
