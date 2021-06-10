@@ -9,10 +9,45 @@
 
 // NICE TO HAVE:
 //	- card flipping
-//  - input MTurk ID if it isn't found
 
 // TO DO (survey):
 //	- CRT with wording modified (check for citation), but question about if they've seen these Qs before
+
+// First choose version of PRL
+//const version = 'deck';
+const version = 'avatar';
+
+switch (version) { 
+  case 'deck':
+  // Choose deck placement
+  // Select 0-4 to choose deck set stimulus
+  var stimuliSet = 4; // change deck set here
+  var stimuliColor = [
+    ['black','blue','red'], // stimulus set = 0
+    ['black','blue','red'], // stimulus set = 1
+    ['black','blue','red'], // stimulus set = 2
+    ['black','blue','red'], // stimulus set = 3
+    ['black','blue','red'] // stimulus set = 4
+  ];  
+  var deckImageExtension = ".jpg";
+  break;
+
+  case 'avatar':
+  // Choose avatar placement
+  // Select 0-6 to choose avatar set stimulus
+  var stimuliSet = 1; // change avatar set here
+  var stimuliColor = [
+    ['black','blue','red'], // stimulus set = 0
+    ['green','orange','purple'], // stimulus set = 1
+    ['darkred','darkteal','orange'], // stimulus set = 2
+    ['brown','lavender','lightblue'], // stimulus set = 3
+    ['lightyellow','mudbrown','turquoise'], // stimulus set = 4
+    ['darkblue','lightturquoise','rose'], // stimulus set = 5
+    ['lavender','red','turquoise'] // stimulus set = 6
+  ];  
+  var deckImageExtension = ".png";
+  break;
+}
 
 // CONSTANTS
 var keyMap = {
@@ -131,24 +166,13 @@ for (var i = trialsPerBlock; i <= totalTrials; i += trialsPerBlock) {
 	breakTrials.push(i);
 }
 
-// Choose deck placement
-// Select 0-6 to choose avatar set stimulus
-const avatarSet = 6; // change avatar set here
-const deckImagePrefix    = "stimuli/avatars/" + avatarSet + "/avatar_";
-const avatarColor = [
-  ['black','blue','red'],
-  ['green','orange','purple'],
-  ['darkred','darkteal','orange'],
-  ['brown','lavender','lightblue'],
-  ['lightyellow','mudbrown','turquoise'],
-  ['darkblue','lightturquoise','rose'],
-  ['lavender','red','turquoise']
-];  
-var deckImageExtension = ".png";
+// grab stimulus
+var stimuliPrefix = "stimuli/" + version + "/" + stimuliSet + "/";
+
 var probabilityNames   = ['high', 'medium', 'low'];
 var probabilityOrder   = shuffle(deepCopy(probabilityNames));
 var deckPositions      = ['left', 'middle', 'right'];
-var deckColorOrder     = shuffle(avatarColor[[avatarSet]]);
+var deckColorOrder     = shuffle(stimuliColor[[stimuliSet]]);
 
 var probabilityToColor    = _.zipObject(probabilityOrder, deckColorOrder);
 var positionToProbability = _.zipObject(deckPositions, probabilityOrder);
@@ -164,7 +188,7 @@ var trialProbabilityArray = [];
 for (var position in positionToColor) {
   var thisID = "#" + position + "DeckImage";
   var color  = positionToColor[position];
-  $(thisID).attr('src', deckImagePrefix + color + deckImageExtension);
+  $(thisID).attr('src', stimuliPrefix + color + deckImageExtension);
 }
 
 var infix          = "-pr1-";
@@ -173,4 +197,4 @@ var completionCode = generateCompletionCode(infix, suffix);
 
 // preload images
 var images = [];
-images = preloadImages(deckImagePrefix, deckColorOrder, deckImageExtension);
+images = preloadImages(stimuliPrefix, deckColorOrder, deckImageExtension);

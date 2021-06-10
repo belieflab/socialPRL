@@ -18,7 +18,7 @@ switch($language){
 }
 
 // set php variable and js config variable 
-$avatarSet = 6;
+$stimuliSet = 4;
 
 // check for configuration file on server; if it does not exist, set db_connection_status to false.
 if (file_exists($_SERVER["DOCUMENT_ROOT"] . '/config.php')) {
