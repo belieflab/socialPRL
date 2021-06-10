@@ -24,6 +24,9 @@ const repeatedAssessment = '';
 const repeatedAssessmentNumber = '';
 //const repeatedAssessmentNumber = 1;
 
+// if using qualtrics, add code to your qualtrics here
+const qualtricsCode = "SV_5jt7BivBUleMhWl";
+
 // First choose version of PRL
 const version = 'deck';
 //const version = 'avatar';
@@ -96,7 +99,7 @@ if (!isEmpty(workerId)) {
     Math.seedrandom(this_seed);
     workerId = "AUNDEFINED_" + this_seed;
 }
-const qualtrics = "https://survey.az1.qualtrics.com/SE/?SID=SV_5jt7BivBUleMhWl&Q_JFE=0&workerId=" + workerId;
+const qualtrics = "https://yalesurvey.ca1.qualtrics.com/SE/?SID=" + qualtricsCode + "&Q_JFE=0&workerId=" + workerId;
 
 let GUID;
 let subjectID;
