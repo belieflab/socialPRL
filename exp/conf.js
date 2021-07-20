@@ -29,19 +29,22 @@ const qualtricsCode = "SV_5jt7BivBUleMhWl";
 
 // First choose version of PRL
 const version = 'deck';
-//const version = 'avatar';
+// const version = 'avatar';
 
 switch (version) { 
   case 'deck':
   // Choose deck placement
   // Select 0-4 to choose deck set stimulus
-  var stimuliSet = 4; // change deck set here
+  var stimuliSet = 7; // change deck set here
   var stimuliColor = [
     ['black','blue','red'], // stimulus set = 0
     ['black','blue','red'], // stimulus set = 1
     ['black','blue','red'], // stimulus set = 2
     ['black','blue','red'], // stimulus set = 3
-    ['black','blue','red'] // stimulus set = 4
+    ['black','blue','red'], // stimulus set = 4
+    ['black','blue','red'], // stimulus set = 5
+    ['black','blue','red'], // stimulus set = 6
+    ['black','blue','red'], // stimulus set = 7
   ];  
   var deckImageExtension = ".jpg";
   var csvPrefix             = "prl_";
@@ -50,7 +53,7 @@ switch (version) {
   case 'avatar':
   // Choose avatar placement
   // Select 0-6 to choose avatar set stimulus
-  var stimuliSet = 1; // change avatar set here
+  var stimuliSet = 7; // change avatar set here
   var stimuliColor = [
     ['black','blue','red'], // stimulus set = 0
     ['green','orange','purple'], // stimulus set = 1
@@ -58,7 +61,8 @@ switch (version) {
     ['brown','lavender','lightblue'], // stimulus set = 3
     ['lightyellow','mudbrown','turquoise'], // stimulus set = 4
     ['darkblue','lightturquoise','rose'], // stimulus set = 5
-    ['lavender','red','turquoise'] // stimulus set = 6
+    ['lavender','red','turquoise'], // stimulus set = 6
+    ['gray','maroon','pinkorange'] // stimulus set = 7
   ];  
   var deckImageExtension = ".png";
   var csvPrefix             = "social_prl_";

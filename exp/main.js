@@ -79,9 +79,6 @@ document.getElementById('nextButton').onclick = function() {
         //$('#nextButton').text(begin);
         document.getElementById("pass").innerHTML = ''; // hides validation success text
         // $('#nextButton').toggleClass("", "noCursor");
-        $("button.noCursor").click(function(){
-          $("body").addClass("hideCursor");
-          });
 
     // } else if (turkprime_online == false){
     //   // let leapfrog = true;
@@ -108,9 +105,16 @@ document.getElementById('nextButton').onclick = function() {
   } else if (nextButtonClickCounter == 2) {
 		// validate attrition ans
 		progressAllowed = validateAttritionAns();
+    //alert('2');
 
 		// hide attrition stuff, show main instructions
 		if (progressAllowed) {
+      
+      // hides cursor after worker validation
+      $(document).ready(function(){
+      $("body").addClass("hideCursor");
+      });
+
 			$(".attrition").css({"display": "none"});
 			$(".instructions").css({"display": "block"});
       $("#nextButton").css({"display": "none"});
@@ -121,7 +125,7 @@ document.getElementById('nextButton').onclick = function() {
       practiceOn = false;
       addToParticipantList(workerId, firstHalfProbabilities, secondHalfProbabilities,
       startDate, startDate, attritionListFileName); // add to attrition list since they saw the instructions
-
+      
     }
 
   // Instructions phase end, practice phase start
@@ -129,7 +133,7 @@ document.getElementById('nextButton').onclick = function() {
     // $(document).ready(function(){
     //   $("body").addClass("hideCursor");
     //   });
-    // alert();
+    
 		keysAllowed = true;
     practiceOn = true;
     interactiveInstructionsOn = false;
@@ -138,28 +142,27 @@ document.getElementById('nextButton').onclick = function() {
       $(document).ready(function(){
         $("body").addClass("showCursor");
         });
-      $("#nextButton").click(function(){
-        $("body").removeClass("showCursor");
-        $("body").addClass("hideCursor");
-        });
       // $("#nextButton").click(function(){
       //   $("body").removeClass("showCursor");
       //   $("body").addClass("hideCursor");
       //   });
+    //alert('33');
     $('#nextButton').css({display: "none"});
     $("#rightDeck").css({display: 'block'});
     // show fixation after feedback is done
     showFixationOnly();
     // reset display once ITI is done
     Timeout.set(reset, ITI_ms);
-
-  // Practice phase end, task phase start
+  
+   // Practice phase end, task phase start
   } else if (nextButtonClickCounter == 4) {
   	keysAllowed = true;
     practiceOn = false;
     interactiveInstructionsOn = false;
+
     $(".instructions").css({"display": "none"});
     $('#nextButton').css({"display": "none"});
+    //alert('4');
     // show fixation after feedback is done
     showFixationOnly();
     // reset display once ITI is done
@@ -209,21 +212,36 @@ $(document).keypress(function(key) {
         hideDecks();
         hideFeedback();
         $("#nextButton").css({"display": "block"});
+        // show cursor at the begin practice trials
         $(document).ready(function(){
           $("body").addClass("showCursor");
           });
+        // hide cursor when beginning practice trials
         $("#nextButton").click(function(){
           $("body").removeClass("showCursor");
           $("body").addClass("hideCursor");
           });
-      } 
-
+      }
+      
       //   });
     } else if (practiceOn) {
-// alert();
+      // if (currInstructions == task_instructions.length) {
+      //   alert();
+      //   $(document).ready(function(){
+      //     $("body").removeClass("showCursor");
+      //     });
+      //   // $("#nextButton").click(function(){
+      //   //   // $("body").removeClass("showCursor");
+      //   //   $("body").addClass("hideCursor");
+      //   //   });
+      //   // $("#nextButton").click(function(){
+      //   //   $("body").removeClass("showCursor");
+      //   //   $("body").addClass("hideCursor");
+      //   //   });
+      // } 
 // 
       if (practiceTrial < totalPracticeTrials) {
-
+        
         if (!breakOn && responseKeyList.includes(thisKey) && (thisPressInterval > minPressInterval)) { // keysAllowed
           keysAllowed = false;
           practiceTrial += 1;
@@ -242,7 +260,7 @@ $(document).keypress(function(key) {
           Timeout.set(showFixationOnly, feedbackDuration_ms);
           // reset display once ITI is done
           Timeout.set(reset, ITI_ms + feedbackDuration_ms);
-        }
+        }        
       }
     } else {
       if (trial < totalTrials) {
