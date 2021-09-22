@@ -54,7 +54,7 @@ var refreshCount          = parseInt("<?php echo $_SESSION['refreshCount']; ?>")
 var dataDirectory         = '../data/';
 var stimulusDirectory     = '../stimuli/';
 var csvPrefix             = "prl_";
-var csvExtension          = '.csv';
+var csvExtension          = '_v2.csv';
 
 
 
@@ -89,7 +89,7 @@ var firstHalfProbabilities  = probabilities[randomIntFromInterval(0, 0)];
 // var secondHalfProbabilities = probabilities[randomIntFromInterval(0, 1)];
 var secondHalfProbabilities = probabilities[randomIntFromInterval(1, 1)];
 var numBlocks               = 4;
-var trialsPerBlock          = 1;
+var trialsPerBlock          = 40;
 var totalTrials             = numBlocks * trialsPerBlock;
 var breakTrials             = [];
 var trial                   = 0;

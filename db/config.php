@@ -21,7 +21,9 @@ if (file_exists($_SERVER["DOCUMENT_ROOT"] . '/config.php')) {
   $ageInMonths = $_GET["interview_age"];
   $visit = $_GET["visit"];
   $week = $_GET["week"];
-  } else {
+  $groupStatus = openssl_decrypt($_GET["phenotype"],$encryptionMethod, $secretHash);
+  //$groupStatus = "lol";
+} else {
     $db_connection_status = null;
     // echo$db_connection_status;
     echo '<script type="text/javascript">let db_connection = false</script>';
