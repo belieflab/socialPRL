@@ -228,8 +228,4 @@ var images = [];
 images = preloadImages(stimuliPrefix, deckColorOrder, deckImageExtension);
 
 
-// instantiate data saving
-var subjectFileName       = dataDirectory + csvPrefix + workerId + repeatedAssessment + repeatedAssessmentNumber + csvExtension;
-var excludedCSVName       = dataDirectory + csvPrefix + workerId + repeatedAssessment + repeatedAssessmentNumber + "_excluded.csv";
-var attritionListFileName = dataDirectory + csvPrefix + "attrition_list.csv";
 
