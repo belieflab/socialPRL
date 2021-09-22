@@ -59,6 +59,7 @@ if (file_exists($_SERVER["DOCUMENT_ROOT"] . '/config.php')) {
     $ageInMonths = $_GET["interview_age"];
     $visit = $_GET["visit"];
     $week = $_GET["week"];
+    $groupStatus = openssl_decrypt($_GET["phenotype"],$encryptionMethod, $secretHash);
 
     echo '<script type="text/javascript">let db_connection = true</script>';
     echo '<script type="text/javascript">let turkprime_online = false</script>';
