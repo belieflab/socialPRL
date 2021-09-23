@@ -53,7 +53,7 @@ switch (version) {
   case 'avatar':
   // Choose avatar placement
   // Select 0-6 to choose avatar set stimulus
-  var stimuliSet = 1; // change avatar set here
+  var stimuliSet = 0; // change avatar set here
   var stimuliColor = [
     ['black','blue','red'], // stimulus set = 0
     ['green','orange','purple'], // stimulus set = 1
