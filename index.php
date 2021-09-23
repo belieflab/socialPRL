@@ -159,6 +159,7 @@ require_once ("db/config.php");
         } else if (db_connection == true){
           GUID = "<?php echo $subjectKey?>";
           subjectID = "<?php echo $consortId?>";
+          workerId = "<?php echo $consortId?>";
           labId = "<?php echo $labId?>";
           sexAtBirth = "<?php echo $sexAtBirth?>";
           siteNumber = "<?php echo $institutionAlias?>";
