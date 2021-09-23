@@ -1,8 +1,3 @@
-// instantiate data saving
-var subjectFileName       = dataDirectory + csvPrefix + workerId + repeatedAssessment + repeatedAssessmentNumber + csvExtension;
-var excludedCSVName       = dataDirectory + csvPrefix + workerId + repeatedAssessment + repeatedAssessmentNumber + "_excluded.csv";
-var attritionListFileName = dataDirectory + csvPrefix + "attrition_list.csv";
-
 
 var task_instructions = [];
 task_instructions.push(instr1);
