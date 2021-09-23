@@ -54,6 +54,7 @@ if (file_exists($_SERVER["DOCUMENT_ROOT"] . '/config.php')) {
 
     $subjectKey = $_GET["subjectkey"];
     $consortId = $_GET["src_subject_id"];
+    $labId = $_GET["study_id"];
     $sexAtBirth = $_GET["sex"];
     $institutionAlias = $_GET["site"];
     $ageInMonths = $_GET["interview_age"];
