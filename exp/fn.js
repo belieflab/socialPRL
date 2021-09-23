@@ -266,6 +266,8 @@ function deepCopy(obj) {
             } else if (turkprime_online == false){
               breakText = "You have completed the task. Your final score is " + score + ".\n" + '<br>' +
               "You have successfully completed the experiment and your data has been saved.\n" + '<br>' +
+              "Please answer one more question at this link:\n" + '<br>' +
+              "<a href="+feedbackLink+">Qualtrics</a>\n" + '<br>' +             
               "You may now close the expriment window at anytime.\n";
               break;
             }
