@@ -159,13 +159,13 @@ switch(language){
         var errorMessage = "Veuillez saisir exactement le texte demandé dans la case avant de cliquer sur Suivant!";
 
         var mobileBrowserErrorMessage = "Vous ne pouvez pas accéder à ce test à partir d'un navigateur mobile. Veuillez utiliser un ordinateur pour participer.";
-        var workerIDErrorMessage = "Vous n'êtes pas éligible pour cette tâche, car votre ID de travailleur a déjà été enregistré comme participant à cette tâche. Veuillez renvoyer le HIT."
+        var workerIDErrorMessage = "Vous n'êtes pas éligible pour cette tâche, car votre ID de participant a déjà été enregistré pour cette tâche. Veuillez renvoyer le HIT."
 
     
         //const consent = 'CONSENT';
         // Attrition instructions -- French
 
-        var openEnded = "Il s'agit d'une enquête anonyme composée de plusieurs questions. Quelques questions sont des questions ouvertes dans lesquelles vous devez taper quelques phrases d'un court paragraphe ou deux. De nombreux travailleurs de MTurk n'aiment pas répondre aux questions ouvertes et ont tendance à quitter une enquête une fois qu'ils voient de telles questions. <b>Si un nombre important de personnes quittaient une enquête à mi-chemin, la qualité des données de cette enquête serait compromise. Cependant, nos recherches dépendent de données de bonne qualité.</b> Par conséquent, assurez-vous que les questions ouvertes ne vous dérangent pas avant de répondre à cette enquête.";
+        var openEnded = "Il s'agit d'une enquête anonyme composée de plusieurs questions. Quelques questions sont des questions ouvertes pour lesquelles vous devrez entrer un court paragraphe ou deux, composés de quelque phrases. De nombreux travailleurs de MTurk n'aiment pas répondre aux questions ouvertes et ont tendance à quitter une enquête une fois qu'ils voient apparaitre de telles questions. <b>Si un nombre important de personnes quittaient une enquête à mi-chemin, la qualité des données de cette enquête serait compromise. Cependant, nos recherches dépendent de données de bonne qualité.</b> Par conséquent, mercid e vous assurer que les questions ouvertes ne vous dérangent pas avant de répondre à cette enquête.";
 
         // Attrition instructions -- French
         var attrition_instructions =  "Veuillez taper la phrase suivante dans la case ci-dessous exactement telle qu'elle est écrite " +
@@ -174,12 +174,12 @@ switch(language){
         "<br /><br />";
 
         var instr1 = "Bienvenue! Avant de commencer, veuillez agrandir votre fenêtre au maximum.  " +
-        "Veuillez ne pas quitter la page des tâches, ne pas utiliser le bouton de retour et ne pas actualiser la page, car vous  " +
-        "pourriez être empêché de terminer la tâche." +
+        "Veuillez ne pas quitter la page des tâches, ne pas utiliser le bouton de retour et ne pas actualiser la page, car cela  " +
+        "pourrait vous empêcher de terminer la tâche." +
         "<br /><br />" +
         "Veuillez appuyer sur la touche zéro (0) pour continuer.";
 
-        var instr2 = "Dans cette étude, vous jouerez à un jeu sur le travail avec les gens, et votre objectif  " +
+        var instr2 = "Dans cette étude, vous jouerez à un jeu sur le travail d'équipe, et votre objectif  " +
         "est de gagner autant de points que possible." +
         "<br /><br />" +
         "Si votre score vous place dans le top  " + percentile + "% des participants, vous " +
@@ -204,11 +204,11 @@ switch(language){
         "Entraînons-nous à choisir des partenaires.  Veuillez choisir le partenaire de  <b>gauche</b> en appuyant sur la touche '1'. ";
 
 
-        var instr4 = "Génial! Choisissez maintenant le partenaire  <b>intermédiaire</b> en appuyant sur la touche '2'.";
+        var instr4 = "Génial! Choisissez maintenant le partenaire  <b>central</b> en appuyant sur la touche '2'.";
 
         var instr5 = "Excellent! Choisissez maintenant le partenaire de <b>droite</b> en appuyant sur la touche '3'.";
 
-        var instr6 = "Bon travail! Vous avez pratiqué avec succès la sélection de partenaires." +
+        var instr6 = "Bon travail! Vous savez maintenant sélectionner un partenaire." +
         "<br /><br />" +
         "Après avoir sélectionné un partenaire, vous verrez si votre projet réussit (+100 points) ou " +
         "échoue (-50 points). " +
@@ -219,21 +219,21 @@ switch(language){
         "Veuillez appuyer sur la touche zéro (0) pour continuer.";
 
 
-        var instr7 = "Il y a un problème supplémentaire: <b>parfois, les partenaires peuvent changer.</b> Le partenaire qui a précédemment  " +
-        "le mieux fonctionné peut commencer à se débattre ou à vous saboter tandis que les autres partenaires peuvent s'améliorer." +
+        var instr7 = "Mais voici un dernier piège: <b>parfois, les partenaires peuvent changer.</b> Le partenaire qui a précédemment  " +
+        "été le plus performant peut se retrouver en difficulté ou commencer à vous saboter tandis que les autres partenaires peuvent s'améliorer." +
         "<br /><br />" +
-        "Si vous pensez que le meilleur partenaire a changé par rapport à ce qu'il était auparavant, essayez de trouver le nouveau meilleur partenaire."+
+        "Si vous pensez que le meilleur partenaire a changé, essayez de trouver le nouveau meilleur partenaire."+
         "<br /><br />" +
-        "Ce qui suit est une ronde d'entraînement de seulement 3 tours. Les points que vous obtenez ici ne changeront pas votre score final,  " +
-        "et le meilleur partenaire changera entre le tour d’entraînement et le début de la partie réelle." +
+        "Ce qui suit est une session d'entraînement de seulement 3 tours. Les points que vous obtenez ici ne changeront pas votre score final,  " +
+        "et le meilleur partenaire peut changer entre le tour d’entraînement et le début de la partie réelle." +
         "<br /><br />" +
-        "Veuillez cliquer sur le bouton «Suivant» pour commencer la ronde d’entraînement.";
+        "Veuillez cliquer sur le bouton «Suivant» pour commencer la session d’entraînement.";
 
 
-        var endPracticeInstructions = "Vous avez maintenant terminé le tour de pratique.  " +
-        "La tâche principale prendra environ 10 minutes supplémentaires avec des tours individuels plus longs que la pratique. " +
+        var endPracticeInstructions = "Vous avez maintenant terminé la session d'entraînement.  " +
+        "La session de jeu réelle durera environ 10 minutes, et comprendra des sessions plus longues que la session d'entraînement. " +
         "<br /><br />" +
-        "Veuillez cliquer sur 'Suivant' chaque fois que vous êtes prêt à démarrer la tâche principale.";
+        "Veuillez cliquer sur 'Suivant' dès que vous êtes prêt à démarrer le jeu.";
 
 
         break;

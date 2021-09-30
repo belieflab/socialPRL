@@ -242,7 +242,7 @@ function deepCopy(obj) {
               breakText = "You are now " + percentComplete + "% done. Please press the zero (0) key to continue.";
               break;
             case "french":
-              breakText = "Vous avez maintenant terminé à  " + percentComplete + "%. Veuillez appuyer sur la touche zéro (0) pour continuer";
+              breakText = "Vous avez maintenant terminé  " + percentComplete + "% du jeu. Veuillez appuyer sur la touche zéro (0) pour continuer";
               break;
             case "german":
               breakText = "Sie sind jetzt zu  " + percentComplete + "% fertig. Bitte drücken Sie die Null-Taste (0), um fortzufahren.";
@@ -272,10 +272,10 @@ function deepCopy(obj) {
             case "french":
               breakText = "Vous avez terminé la tâche. Votre score final est de  " + score + ".\n" + '<br>' +
                 "Vous avez terminé le test avec succès et vos données ont été enregistrées.\n" + '<br>' +
-                "Veuillez passer à la deuxième partie de la tâche à ce lien:\n" + '<br>' +
+                "Veuillez accèder à la deuxième partie de la tâche à l'aide de ce lien:\n" + '<br>' +
                 "<a href="+qualtrics+">Qualtrics</a>\n" + '<br>' +
                     // "Please wait for the experimenter to continue.\n"+ '<br>' +
-                "Vous pouvez maintenant fermer la fenêtre de l'expérience à tout moment.\n";
+                "Vous pouvez maintenant fermer la fenêtre de votre navigateur.\n";
                 break;
             case "german":
               breakText = "Sie haben die Aufgabe abgeschlossen. Ihr Endergebnis ist " + score + ".\n" + '<br>' +
