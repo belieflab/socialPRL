@@ -14,22 +14,22 @@
 //	- CRT with wording modified (check for citation), but question about if they've seen these Qs before
 
 // repeated assessment
-const repeatedAssessment = '';
+//const repeatedAssessment = '';
 // repeatedAssessment; v = vist, w = week (use abbreviations 'v' or 'w')
 // repeatedAssessment must be _ followed by week or visit (e.g., _w)
-//const repeatedAssessment = '_v';
+const repeatedAssessment = '_v';
 //const repeatedAssessment = '_w';
 
 // repeated assessment number
-const repeatedAssessmentNumber = '';
-//const repeatedAssessmentNumber = 1;
+//const repeatedAssessmentNumber = '';
+const repeatedAssessmentNumber = 2;
 
 // if using qualtrics, add code to your qualtrics here
 const qualtricsCode = "SV_5jt7BivBUleMhWl";
 
 // First choose version of PRL
-const version = 'deck';
-// const version = 'avatar';
+//const version = 'deck';
+const version = 'avatar';
 
 switch (version) { 
   case 'deck':
@@ -53,7 +53,7 @@ switch (version) {
   case 'avatar':
   // Choose avatar placement
   // Select 0-6 to choose avatar set stimulus
-  var stimuliSet = 7; // change avatar set here
+  var stimuliSet = 0; // change avatar set here
   var stimuliColor = [
     ['black','blue','red'], // stimulus set = 0
     ['green','orange','purple'], // stimulus set = 1
@@ -226,3 +226,6 @@ var completionCode = generateCompletionCode(infix, suffix);
 // preload images
 var images = [];
 images = preloadImages(stimuliPrefix, deckColorOrder, deckImageExtension);
+
+
+

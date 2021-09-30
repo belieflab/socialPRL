@@ -54,11 +54,13 @@ if (file_exists($_SERVER["DOCUMENT_ROOT"] . '/config.php')) {
 
     $subjectKey = $_GET["subjectkey"];
     $consortId = $_GET["src_subject_id"];
+    $labId = $_GET["study_id"];
     $sexAtBirth = $_GET["sex"];
     $institutionAlias = $_GET["site"];
     $ageInMonths = $_GET["interview_age"];
     $visit = $_GET["visit"];
     $week = $_GET["week"];
+    $groupStatus = openssl_decrypt($_GET["phenotype"],$encryptionMethod, $secretHash);
 
     echo '<script type="text/javascript">let db_connection = true</script>';
     echo '<script type="text/javascript">let turkprime_online = false</script>';
