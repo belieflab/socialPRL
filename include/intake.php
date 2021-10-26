@@ -5,10 +5,8 @@
   <div id="intake">
     <p><b>Research Site:</b></p>
     <select name="facility" id="siteid">
-        <option value="none">---</option>
-        <option value="Yale">Yale</option>
-        <option value="UA">UA</option>
-        <option value="UPenn">UPenn</option>
+        <option value="Vanderbilt">Vanderbilt</option>
+       
     </select>
     <label for="facility"></label>
     <!-- <form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">

@@ -22,20 +22,20 @@ const repeatedAssessment = '_v';
 
 // repeated assessment number
 //const repeatedAssessmentNumber = '';
-const repeatedAssessmentNumber = 2;
+const repeatedAssessmentNumber = 1;
 
 // if using qualtrics, add code to your qualtrics here
 const qualtricsCode = "SV_5jt7BivBUleMhWl";
 
 // First choose version of PRL
-//const version = 'deck';
-const version = 'avatar';
+const version = 'deck';
+//const version = 'avatar';
 
 switch (version) { 
   case 'deck':
   // Choose deck placement
   // Select 0-4 to choose deck set stimulus
-  var stimuliSet = 7; // change deck set here
+  var stimuliSet = 0; // change deck set here
   var stimuliColor = [
     ['black','blue','red'], // stimulus set = 0
     ['black','blue','red'], // stimulus set = 1

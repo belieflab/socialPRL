@@ -99,14 +99,8 @@ function validateSite() {
 
     // const zeroPad = (num, places) => String(num).padStart(places, '0');
     switch(siteID.options[siteID.selectedIndex].value){
-        case "Yale":
-            siteNumber = 'Yale';
-            break;
-        case "UA":
-            siteNumber = 'UA';
-            break;
-        case "UPenn":
-            siteNumber = 'UPenn';
+        case "Vanderbilt":
+            siteNumber = 'Vanderbilt';
             break;
         default:
             siteNumber = '';

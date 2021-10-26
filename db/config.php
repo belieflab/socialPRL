@@ -1,7 +1,7 @@
 <?php
 /* SELECT A LANGUAGE */
-// $language = 'english';
-$language = 'french';
+$language = 'english';
+// $language = 'french';
 // $language = 'german';
 
 /* assign PHP variable to JS variable */
