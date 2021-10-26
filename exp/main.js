@@ -1,6 +1,11 @@
 // instantiate data saving
-var subjectFileName       = dataDirectory + csvPrefix + workerId + repeatedAssessment + repeatedAssessmentNumber + csvExtension;
-var excludedCSVName       = dataDirectory + csvPrefix + workerId + repeatedAssessment + repeatedAssessmentNumber + "_excluded.csv";
+if (turkprime_online == false) {
+  var subjectFileName       = dataDirectory + csvPrefix + subjectID + repeatedAssessment + repeatedAssessmentNumber + csvExtension;
+  var excludedCSVName       = dataDirectory + csvPrefix + subjectID + repeatedAssessment + repeatedAssessmentNumber + "_excluded.csv";
+} else if (turkprime_online == true) {
+  var subjectFileName       = dataDirectory + csvPrefix + workerId + repeatedAssessment + repeatedAssessmentNumber + csvExtension;
+  var excludedCSVName       = dataDirectory + csvPrefix + workerId + repeatedAssessment + repeatedAssessmentNumber + "_excluded.csv";
+}
 var attritionListFileName = dataDirectory + csvPrefix + "attrition_list.csv";
 
 var task_instructions = [];
