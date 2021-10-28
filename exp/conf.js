@@ -84,6 +84,8 @@ var keyMap = {
 // var workerId = prompt("enter subjectID:");
 // var confirm_id = alert("You have entered:\n\n" + workerId + "\n\nIf incorrect, please refresh the browser and enter the correct ID.");
 
+
+// commment
 let workerId = getParamFromURL( 'workerId' );
 
 

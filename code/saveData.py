@@ -12,6 +12,7 @@ fileName   					= data.getvalue("fileName", "FILENAME_NULL")
 subjectkey	 				= data.getvalue("subjectkey", "GUID_NULL")
 site		 				= data.getvalue("site", "SITE_NULL")
 autoWorkerID 				= data.getvalue("autoWorkerID", "AUTOWORKERID_NULL")
+subjectID	 				= data.getvalue("subjectID", "SUBJECTID_NULL")
 interview_date 				= data.getvalue("interview_date", "INTERVIEWDATE_NULL")
 interview_age 				= data.getvalue("interview_age", "INTERVIEWAGE_NULL")
 sex 						= data.getvalue("sex", "SEX_NULL")
@@ -40,52 +41,103 @@ RT 							= json.loads(data.getvalue("RT", "RT_NULL"))
 score 						= json.loads(data.getvalue("score", "SCORE_NULL"))
 excludedReason 				= data.getvalue("excludedReason", "EXCLUDEDREASON_NULL")
 
-if excludedReason != "NA":	
-	fileName = excludedFileName
+if autoWorkerID != "AUTOWORKERID_NULL":
+	if excludedReason != "NA":	
+		fileName = excludedFileName
 
-numRows = len(trialNums)
-# Write to the file - XXX FIX BASED ON ROW INDEX
+	numRows = len(trialNums)
+	# Write to the file - XXX FIX BASED ON ROW INDEX
 
-if visit != "VISIT_NULL":
-	with open(fileName, 'a') as csvFile:
-		csvWriter = csv.writer(csvFile, delimiter=",")
-		csvWriter.writerow(['subjectkey', 'src_subject_id', 'site', 'visit', 'interview_date', 'interview_age', 'sex', 'handedness', 'task_version', 'key_press', 'start_time', 'end_time', 'browser', 'index', 'first_half_probabilities', 'second_half_probabilities', 'deck_color', 'deck_position', 'deck_probabilities', 'deck_contingencies', 'response_color', 'response_position', 'response_probability', 'reward_type', 'trial_type', 'rt', 'reward_tally', 'exclusion_reason'])
+	if visit != "VISIT_NULL":
+		with open(fileName, 'a') as csvFile:
+			csvWriter = csv.writer(csvFile, delimiter=",")
+			csvWriter.writerow(['subjectkey', 'src_subject_id', 'site', 'visit', 'interview_date', 'interview_age', 'sex', 'handedness', 'task_version', 'key_press', 'start_time', 'end_time', 'browser', 'index', 'first_half_probabilities', 'second_half_probabilities', 'deck_color', 'deck_position', 'deck_probabilities', 'deck_contingencies', 'response_color', 'response_position', 'response_probability', 'reward_type', 'trial_type', 'rt', 'reward_tally', 'exclusion_reason'])
 
-		for row in range(numRows):
+			for row in range(numRows):
 
-			csvWriter.writerow([subjectkey, autoWorkerID, site, visit, interview_date, interview_age, sex, handedness, task_version, keys[row], startDate, endDate, userAgentString, trialNums[row],
-				firstHalfProbabilities, secondHalfProbabilities, deckColors[row], deckPositions[row],
-				deckProbabilities[row], deckProbabilityOrder[row], colors[row], positions[row],
-				probabilities[row], results[row], reversals[row], RT[row], score[row], excludedReason])
+				csvWriter.writerow([subjectkey, autoWorkerID, site, visit, interview_date, interview_age, sex, handedness, task_version, keys[row], startDate, endDate, userAgentString, trialNums[row],
+					firstHalfProbabilities, secondHalfProbabilities, deckColors[row], deckPositions[row],
+					deckProbabilities[row], deckProbabilityOrder[row], colors[row], positions[row],
+					probabilities[row], results[row], reversals[row], RT[row], score[row], excludedReason])
 
-	sys.stdout.write('Content-type: text/plain; charset=UTF-8\n\n')
-	sys.stdout.write('Done.')
-elif week != "WEEK_NULL":
-	with open(fileName, 'a') as csvFile:
-		csvWriter = csv.writer(csvFile, delimiter=",")
-		csvWriter.writerow(['subjectkey', 'src_subject_id', 'site', 'week', 'interview_date', 'interview_age', 'sex', 'handedness', 'task_version', 'key_press', 'start_time', 'end_time', 'browser', 'index', 'first_half_probabilities', 'second_half_probabilities', 'deck_color', 'deck_position', 'deck_probabilities', 'deck_contingencies', 'response_color', 'response_position', 'response_probability', 'reward_type', 'trial_type', 'rt', 'reward_tally', 'exclusion_reason'])
+		sys.stdout.write('Content-type: text/plain; charset=UTF-8\n\n')
+		sys.stdout.write('Done.')
+	elif week != "WEEK_NULL":
+		with open(fileName, 'a') as csvFile:
+			csvWriter = csv.writer(csvFile, delimiter=",")
+			csvWriter.writerow(['subjectkey', 'src_subject_id', 'site', 'week', 'interview_date', 'interview_age', 'sex', 'handedness', 'task_version', 'key_press', 'start_time', 'end_time', 'browser', 'index', 'first_half_probabilities', 'second_half_probabilities', 'deck_color', 'deck_position', 'deck_probabilities', 'deck_contingencies', 'response_color', 'response_position', 'response_probability', 'reward_type', 'trial_type', 'rt', 'reward_tally', 'exclusion_reason'])
 
-		for row in range(numRows):
+			for row in range(numRows):
 
-			csvWriter.writerow([subjectkey, autoWorkerID, site, week, interview_date, interview_age, sex, handedness, task_version, keys[row], startDate, endDate, userAgentString, trialNums[row],
-				firstHalfProbabilities, secondHalfProbabilities, deckColors[row], deckPositions[row],
-				deckProbabilities[row], deckProbabilityOrder[row], colors[row], positions[row],
-				probabilities[row], results[row], reversals[row], RT[row], score[row], excludedReason])
+				csvWriter.writerow([subjectkey, autoWorkerID, site, week, interview_date, interview_age, sex, handedness, task_version, keys[row], startDate, endDate, userAgentString, trialNums[row],
+					firstHalfProbabilities, secondHalfProbabilities, deckColors[row], deckPositions[row],
+					deckProbabilities[row], deckProbabilityOrder[row], colors[row], positions[row],
+					probabilities[row], results[row], reversals[row], RT[row], score[row], excludedReason])
 
-	sys.stdout.write('Content-type: text/plain; charset=UTF-8\n\n')
-	sys.stdout.write('Done.')
-# this else is important for studies that do not use timepoints!!
-else:
-	with open(fileName, 'a') as csvFile:
-		csvWriter = csv.writer(csvFile, delimiter=",")
-		csvWriter.writerow(['subjectkey', 'src_subject_id', 'site', 'interview_date', 'interview_age', 'sex', 'handedness', 'task_version', 'key_press', 'start_time', 'end_time', 'browser', 'index', 'first_half_probabilities', 'second_half_probabilities', 'deck_color', 'deck_position', 'deck_probabilities', 'deck_contingencies', 'response_color', 'response_position', 'response_probability', 'reward_type', 'trial_type', 'rt', 'reward_tally', 'exclusion_reason'])
+		sys.stdout.write('Content-type: text/plain; charset=UTF-8\n\n')
+		sys.stdout.write('Done.')
+	# this else is important for studies that do not use timepoints!!
+	else:
+		with open(fileName, 'a') as csvFile:
+			csvWriter = csv.writer(csvFile, delimiter=",")
+			csvWriter.writerow(['subjectkey', 'src_subject_id', 'site', 'interview_date', 'interview_age', 'sex', 'handedness', 'task_version', 'key_press', 'start_time', 'end_time', 'browser', 'index', 'first_half_probabilities', 'second_half_probabilities', 'deck_color', 'deck_position', 'deck_probabilities', 'deck_contingencies', 'response_color', 'response_position', 'response_probability', 'reward_type', 'trial_type', 'rt', 'reward_tally', 'exclusion_reason'])
 
-		for row in range(numRows):
+			for row in range(numRows):
 
-			csvWriter.writerow([subjectkey, autoWorkerID, site, interview_date, interview_age, sex, handedness, task_version, keys[row], startDate, endDate, userAgentString, trialNums[row],
-				firstHalfProbabilities, secondHalfProbabilities, deckColors[row], deckPositions[row],
-				deckProbabilities[row], deckProbabilityOrder[row], colors[row], positions[row],
-				probabilities[row], results[row], reversals[row], RT[row], score[row], excludedReason])
+				csvWriter.writerow([subjectkey, autoWorkerID, site, interview_date, interview_age, sex, handedness, task_version, keys[row], startDate, endDate, userAgentString, trialNums[row],
+					firstHalfProbabilities, secondHalfProbabilities, deckColors[row], deckPositions[row],
+					deckProbabilities[row], deckProbabilityOrder[row], colors[row], positions[row],
+					probabilities[row], results[row], reversals[row], RT[row], score[row], excludedReason])
 
-	sys.stdout.write('Content-type: text/plain; charset=UTF-8\n\n')
-	sys.stdout.write('Done.')
+		sys.stdout.write('Content-type: text/plain; charset=UTF-8\n\n')
+		sys.stdout.write('Done.')
+elif subjectID != "SUBJECTID_NULL":
+	if excludedReason != "NA":	
+		fileName = excludedFileName
+
+	numRows = len(trialNums)
+	# Write to the file - XXX FIX BASED ON ROW INDEX
+
+	if visit != "VISIT_NULL":
+		with open(fileName, 'a') as csvFile:
+			csvWriter = csv.writer(csvFile, delimiter=",")
+			csvWriter.writerow(['subjectkey', 'src_subject_id', 'site', 'visit', 'interview_date', 'interview_age', 'sex', 'handedness', 'task_version', 'key_press', 'start_time', 'end_time', 'browser', 'index', 'first_half_probabilities', 'second_half_probabilities', 'deck_color', 'deck_position', 'deck_probabilities', 'deck_contingencies', 'response_color', 'response_position', 'response_probability', 'reward_type', 'trial_type', 'rt', 'reward_tally', 'exclusion_reason'])
+
+			for row in range(numRows):
+
+				csvWriter.writerow([subjectkey, subjectID, site, visit, interview_date, interview_age, sex, handedness, task_version, keys[row], startDate, endDate, userAgentString, trialNums[row],
+					firstHalfProbabilities, secondHalfProbabilities, deckColors[row], deckPositions[row],
+					deckProbabilities[row], deckProbabilityOrder[row], colors[row], positions[row],
+					probabilities[row], results[row], reversals[row], RT[row], score[row], excludedReason])
+
+		sys.stdout.write('Content-type: text/plain; charset=UTF-8\n\n')
+		sys.stdout.write('Done.')
+	elif week != "WEEK_NULL":
+		with open(fileName, 'a') as csvFile:
+			csvWriter = csv.writer(csvFile, delimiter=",")
+			csvWriter.writerow(['subjectkey', 'src_subject_id', 'site', 'week', 'interview_date', 'interview_age', 'sex', 'handedness', 'task_version', 'key_press', 'start_time', 'end_time', 'browser', 'index', 'first_half_probabilities', 'second_half_probabilities', 'deck_color', 'deck_position', 'deck_probabilities', 'deck_contingencies', 'response_color', 'response_position', 'response_probability', 'reward_type', 'trial_type', 'rt', 'reward_tally', 'exclusion_reason'])
+
+			for row in range(numRows):
+
+				csvWriter.writerow([subjectkey, subjectID, site, week, interview_date, interview_age, sex, handedness, task_version, keys[row], startDate, endDate, userAgentString, trialNums[row],
+					firstHalfProbabilities, secondHalfProbabilities, deckColors[row], deckPositions[row],
+					deckProbabilities[row], deckProbabilityOrder[row], colors[row], positions[row],
+					probabilities[row], results[row], reversals[row], RT[row], score[row], excludedReason])
+
+		sys.stdout.write('Content-type: text/plain; charset=UTF-8\n\n')
+		sys.stdout.write('Done.')
+	# this else is important for studies that do not use timepoints!!
+	else:
+		with open(fileName, 'a') as csvFile:
+			csvWriter = csv.writer(csvFile, delimiter=",")
+			csvWriter.writerow(['subjectkey', 'src_subject_id', 'site', 'interview_date', 'interview_age', 'sex', 'handedness', 'task_version', 'key_press', 'start_time', 'end_time', 'browser', 'index', 'first_half_probabilities', 'second_half_probabilities', 'deck_color', 'deck_position', 'deck_probabilities', 'deck_contingencies', 'response_color', 'response_position', 'response_probability', 'reward_type', 'trial_type', 'rt', 'reward_tally', 'exclusion_reason'])
+
+			for row in range(numRows):
+
+				csvWriter.writerow([subjectkey, subjectID, site, interview_date, interview_age, sex, handedness, task_version, keys[row], startDate, endDate, userAgentString, trialNums[row],
+					firstHalfProbabilities, secondHalfProbabilities, deckColors[row], deckPositions[row],
+					deckProbabilities[row], deckProbabilityOrder[row], colors[row], positions[row],
+					probabilities[row], results[row], reversals[row], RT[row], score[row], excludedReason])
+
+		sys.stdout.write('Content-type: text/plain; charset=UTF-8\n\n')
+		sys.stdout.write('Done.')
