@@ -74,10 +74,7 @@ require_once ("db/config.php");
   <p id="workerIDErrorMessage"><script>workerIDErrorMessage</script></p>
 </div>
 
-<div id="instructionsHolder" class="instructions centeredDiv">
-  <p id="instructions1" class="instructions">Test instructions!</p>
-  <!-- <p id="errorInstructions" class="error instructions">Error instructions</p> -->
-</div>
+
 
 <div class="filler"> </div>
 <div class="deckContainer task">

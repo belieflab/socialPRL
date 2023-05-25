@@ -72,6 +72,10 @@
 
 <div id="load" style="display: none">
 <h3 id='pass'>All validation rules were passed successfully. Click to load the experiment.</h3>
+<div id="instructionsHolder" class="instructions centeredDiv">
+  <p id="instructions1" class="instructions">Test instructions!</p>
+  <!-- <p id="errorInstructions" class="error instructions">Error instructions</p> -->
+</div>
 <button id="nextButton" class="noCursor" onclick="startExperiment()"><script>load</script></button>
 <!-- <p id="nextButton" style="display: none" >please make sure you are in a quiet place. When you are ready to begin, click 'START'</p> -->
 <br>
