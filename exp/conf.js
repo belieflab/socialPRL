@@ -67,6 +67,25 @@ switch (version) {
   var deckImageExtension = ".png";
   var csvPrefix             = "social_prl_";
   break;
+
+  case 'sabotage':
+    // Choose avatar placement
+    // Select 0-6 to choose avatar set stimulus
+    var stimuliSet = 0; // change avatar set here
+    var stimuliColor = [
+      ['black','blue','red'], // stimulus set = 0
+      ['green','orange','purple'], // stimulus set = 1
+      ['darkred','darkteal','orange'], // stimulus set = 2
+      ['brown','lavender','lightblue'], // stimulus set = 3
+      ['lightyellow','mudbrown','turquoise'], // stimulus set = 4
+      ['darkblue','lightturquoise','rose'], // stimulus set = 5
+      ['lavender','red','turquoise'], // stimulus set = 6
+      ['gray','maroon','pinkorange'] // stimulus set = 7
+    ];  
+    var deckImageExtension = ".png";
+    var csvPrefix             = "sabotage_prl_";
+    break;
+
 }
 
 // CONSTANTS
@@ -157,7 +176,7 @@ var firstHalfProbabilities  = probabilities[randomIntFromInterval(0, 0)];
 // var secondHalfProbabilities = probabilities[randomIntFromInterval(0, 1)];
 var secondHalfProbabilities = probabilities[randomIntFromInterval(1, 1)];
 var numBlocks               = 4;
-var trialsPerBlock          = 40;
+var trialsPerBlock          = 1; // 40 actually
 var totalTrials             = numBlocks * trialsPerBlock;
 var breakTrials             = [];
 var trial                   = 0;

@@ -240,6 +240,7 @@ function deepCopy(obj) {
       if (percentComplete < 100) {
           switch(language) {
             case "english":
+              console.log(percentComplete);
               breakText = "You are now " + percentComplete + "% done. Please press the zero (0) key to continue.";
               break;
             case "french":
@@ -249,6 +250,14 @@ function deepCopy(obj) {
               breakText = "Sie sind jetzt zu  " + percentComplete + "% fertig. Bitte drücken Sie die Null-Taste (0), um fortzufahren.";
               break;
           }
+        } else if (percentComplete==75) {
+          percentComplete=100;
+        } else if (percentComplete==100) {
+          breakText="question1_random";
+          percentComplete=101;
+        } else if (percentComplete==101) {
+          breakText="question2_sabotage";
+          percentComplete++;
       } else {
         document.getElementById("unload").onbeforeunload='';
         $(document).ready(function(){
