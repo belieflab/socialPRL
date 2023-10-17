@@ -130,54 +130,50 @@ switch(language){
                 "Please click the 'Begin' button to start the practice round.";
                 break;
 
-                case 'sabotage':
-
-                var instr2 = "In this study, you will play a game about working with people, and your goal " +
-                "is to win as many points as you can." +
+            case 'sabotage':
+                var instr2 = "<b>You are beginning a new job and your boss regularly evaluates you.</b>" +
                 "<br /><br />" +
-                "If your score lands you in the top " + percentile + "% of participants, you will " +
-                "get an extra $" + bonus + " bonus, so please do your best!" +
+                "When you perform well, you earn points with your boss (+100); however, poor performance"+
+                " will lead you to lose points (-50)" +
                 "<br /><br />" +
-                "Please also keep in mind that this survey consists of two parts: the game and " +
-                "a survey. After completing the survey, please record the confirmation code you receive. " +
-                "<b>You must submit the code in order to receive compensation.</b>" +
+                "Your goal is to earn as many points as possible.</b>" +
                 "<br /><br />" +
                 "Please press the zero (0) key to continue.";   
 
-                var instr3 = "Imagine you are a student at a university. Working with classmates " +
-                "can help you learn and complete group projects. However, sometimes classmates can be " +
-                "unreliable. They can show up late, fail to complete their work, or be distracted for " +
-                "personal reasons. Some classmates may even deliberately sabotage your work." +
+                var instr3 = "To complete tasks successfully, you must rely on co-workers for advice and help." +
+                "Some of your co-workers are helpful, whereas others are not."+
                 "<br /><br />" +
-                "Three classmates are shown below. On each turn, you will select one partner to work with " +
-                "on a school project. You may use the '1', '2', or '3' keys on your keyboard to choose the " +
-                "left, middle, or right classmate, respectively. " +
+                "Furthermore, <b>sometimes they will want to see you fail</b> and "+ 
+                "switch from helping you to actively hurting your performance."+
                 "<br /><br />" +
-                "Let's practice choosing partners. Please select the <b>left</b> partner by pressing the '1' key. ";
-        
-        
-                var instr4 = "Great! Now choose the <b>middle</b> partner by pressing the '2' key.";
-        
-                var instr5 = "Excellent! Now choose the <b>right</b> partner by pressing the '3' key.";
-        
-                var instr6 = "Good job! You have successfully practiced selecting partners." +
+                "Three co-workers are shown below. On each turn, you will select one to ask for help. " +
+                "You may use the '1', '2', or '3' keys on your keyboard to choose the " +
+                "left, middle, or right co-workers, respectively. " +
                 "<br /><br />" +
-                "After you select a partner, you will see if your project succeeds (+100 points) or " +
-                "fails (-50 points). " +
+                "Let's practice choosing co-workers. Please select the <b>left</b> co-worker by pressing the '1' key. ";
+    
+        
+                var instr4 = "Great! Now choose the <b>middle</b> co-worker by pressing the '2' key.";
+        
+                var instr5 = "Excellent! Now choose the <b>right</b> co-worker by pressing the '3' key.";
+        
+                var instr6 = "Good job! You have successfully practiced selecting co-workers for help." +
+                "<br /><br />" +
+                "After you select a co-worker, you will see if they help earn points with the boss (+100 points) or " +
+                "lose points with the boss (-50 points). " +
                 "<br /><br />"+
-                "<b>Note that each partner is different.</b> Your job is to find the best partner, and to get as " +
-                "many points as possible. However, no partner is perfect. Anyone can have a bad day. " +
+                "<b>Note that each co-worker is different.</b> Your job is to find the best co-worker, and to get as " +
+                "many points as possible. However, no co-worker is perfect. Anyone can have a bad day. " +
                 "<br /><br />"+
                 "Please press the zero (0) key to continue.";
         
-        
-                var instr7 = "There is one additional catch: <b>sometimes, the partners may change.</b> The partner that previously " +
-                "performed the best may start to struggle or sabotage you while the other partners may improve." +
+                var instr7 = "There is one additional catch: <b>sometimes, the co-workers may change.</b> The co-worker that previously " +
+                "helped the most may start to sabotage you while the other co-workers become helpful." +
                 "<br /><br />" +
-                "If you think the best partner has changed, you should try to find the new best partner."+
+                "If you think the best co-worker has changed, you should try to find the new best co-worker."+
                 "<br /><br />" +
                 "The following is a practice round of just 3 turns. The points you get here won’t change your final score, " +
-                "and the best partner will change between the practice round and when the real game starts." +
+                "and the best co-worker will change between the practice round and when the real game starts." +
                 "<br /><br />" +
                 "Please click the 'Begin' button to start the practice round.";
                 break;

@@ -28,7 +28,7 @@ const repeatedAssessmentNumber = 1;
 const qualtricsCode = "SV_5jt7BivBUleMhWl";
 
 // First choose version of PRL
-const version = 'deck';
+const version = 'sabotage';
 //const version = 'avatar';
 
 switch (version) { 
