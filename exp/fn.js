@@ -422,7 +422,7 @@ function deepCopy(obj) {
     let load;
     switch(language){
       case 'english': 
-       consent='CONSENT';
+       consent='SUBMIT';
        load='LOAD';
        break
  
