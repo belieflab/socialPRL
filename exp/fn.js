@@ -250,14 +250,14 @@ function deepCopy(obj) {
               breakText = "Sie sind jetzt zu  " + percentComplete + "% fertig. Bitte drücken Sie die Null-Taste (0), um fortzufahren.";
               break;
           }
-        } else if (percentComplete==75) {
-          percentComplete=100;
-        } else if (percentComplete==100) {
-          breakText="question1_random";
-          percentComplete=101;
-        } else if (percentComplete==101) {
-          breakText="question2_sabotage";
-          percentComplete++;
+        // } else if (percentComplete==75) {
+        //   percentComplete=100;
+        // } else if (percentComplete==100) {
+        //   breakText="question1_random";
+        //   percentComplete=101;
+        // } else if (percentComplete==101) {
+        //   breakText="question2_sabotage";
+        //   percentComplete++;
       } else {
         document.getElementById("unload").onbeforeunload='';
         $(document).ready(function(){
