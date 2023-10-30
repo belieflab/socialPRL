@@ -1,6 +1,6 @@
 <div class="screening" style="background-color:darkgray; text-align:center; margin:35px; vertical-align:middle">
 <br>
-<h1 id="hide" style="text-align:center;"><?php echo $studyAlias;?> test Participant Intake</h1>
+<h1 id="hide" style="text-align:center;"><?php echo $studyAlias;?> Participant Intake</h1>
 <!-- <input type="text" id="result"> -->
   <div id="intake">
     
