@@ -18,6 +18,7 @@ switch($language){
 }
 
 // check for configuration file on server; if it does not exist, set db_connection_status to false.
+// something below may need to be altered to make this consistent with CAPR?
 if (file_exists($_SERVER["DOCUMENT_ROOT"] . '/config.php')) {
   include_once ($_SERVER["DOCUMENT_ROOT"] . '/config.php');
   // echo$_SERVER["DOCUMENT_ROOT"];
